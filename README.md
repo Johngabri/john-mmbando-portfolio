@@ -4,11 +4,9 @@ A responsive, static portfolio site built with HTML, CSS, and JavaScript. It has
 
 ## Publish on GitHub Pages
 
-1. Create a **public** repository named `john-gabriel-mmbando-portfolio`.
-2. Extract the supplied ZIP on your computer. In the new GitHub repository, select **Add file → Upload files** and upload the four files from the extracted folder (`index.html`, `favicon.svg`, `.nojekyll`, and `README.md`). Keep `index.html` at the repository root.
-3. Commit the uploaded files to the `main` branch.
-4. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-5. GitHub will show the public website address on the Pages settings screen after it publishes. It will look like `https://YOUR-GITHUB-USERNAME.github.io/john-gabriel-mmbando-portfolio/`.
+This portfolio is prepared in the public `Johngabri/john-mmbando-portfolio` repository. To publish it, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
+
+The expected website address is `https://johngabri.github.io/john-mmbando-portfolio/`. GitHub will show the final public address on the Pages settings screen after the first deployment completes.
 
 GitHub Pages is free for public repositories on GitHub Free. Publishing makes the repository files and profile content publicly viewable.
 
