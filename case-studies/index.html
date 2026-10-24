@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore four fictional grants and finance case studies by John Gabriel Mmbando: accountability, field verification, funding requests, and closeout. Synthetic data and simulated updates.">
+  <meta name="theme-color" content="#f4f5f0">
+  <title>Grants &amp; Finance Portfolio Cases — John Gabriel Mmbando</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f5f0;
+      --paper-deep: #eaeee9;
+      --surface: #fffefa;
+      --ink: #173347;
+      --muted: #64747a;
+      --teal: #267f76;
+      --teal-dark: #17645f;
+      --teal-soft: #e5f1ed;
+      --gold: #d9bd80;
+      --gold-soft: #f6f0df;
+      --line: #dfe5df;
+      --navy: #16394d;
+      --warning: #a9662e;
+      --warning-soft: #fbf1e4;
+      --success: #28715f;
+      --success-soft: #e7f3ed;
+      --shadow: 0 8px 28px rgba(23, 51, 71, .045);
+      --radius: 18px;
+      --radius-small: 12px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    button { font: inherit; }
+    .wrap { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(23,51,71,.08); background: rgba(248,249,245,.94); backdrop-filter: blur(14px); }
+    .header-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: .82rem; font-weight: 800; letter-spacing: .035em; line-height: 1.15; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: var(--navy); color: white; letter-spacing: .02em; }
+    .brand small { display: block; margin-top: 5px; color: var(--muted); font-size: .62rem; font-weight: 700; letter-spacing: .11em; }
+    .header-link { display: inline-flex; align-items: center; gap: 9px; padding: 11px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.58); color: var(--ink); font-size: .86rem; font-weight: 700; text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+    .header-link:hover { border-color: var(--teal); transform: translateY(-1px); }
+    .hero { padding: 64px 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(300px,.85fr); align-items: center; gap: clamp(30px,5vw,64px); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 16px; color: var(--teal-dark); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--gold); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 680px; margin-bottom: 18px; font-size: clamp(3rem,6.5vw,5rem); font-weight: 760; letter-spacing: -.06em; line-height: 1.02; }
+    h1 span { color: var(--teal); }
+    .hero-copy { max-width: 590px; margin-bottom: 24px; color: #54666f; font-size: clamp(1rem,1.8vw,1.15rem); line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 19px; border: 0; border-radius: 999px; background: var(--teal); color: white; font-weight: 750; text-decoration: none; cursor: pointer; transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .button:hover:not(:disabled) { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 8px 22px rgba(38,127,118,.18); }
+    .button:disabled { opacity: .48; cursor: not-allowed; }
+    .button-secondary { border: 1px solid var(--line); background: transparent; color: var(--ink); }
+    .button-secondary:hover:not(:disabled) { background: white; color: var(--ink); }
+    .button-small { min-height: 42px; padding: 9px 15px; font-size: .9rem; }
+    .case-cover { position: relative; min-height: 320px; overflow: hidden; padding: 26px; border-radius: 22px; background: var(--navy); color: white; box-shadow: 0 12px 32px rgba(22,57,77,.12); }
+    .case-cover::before, .case-cover::after { position: absolute; content: ""; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; pointer-events: none; }
+    .case-cover::before { width: 280px; height: 280px; right: -92px; top: -98px; }
+    .case-cover::after { width: 200px; height: 200px; right: -50px; top: -58px; }
+    .cover-top, .cover-bottom { position: relative; z-index: 1; }
+    .cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; }
+    .cover-code { color: #bfd0d3; font-size: .74rem; font-weight: 800; letter-spacing: .12em; }
+    .cover-pill { padding: 6px 10px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; color: #f4e5bc; font-size: .72rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+    .cover-amount { display: block; margin-top: 42px; font-size: clamp(2.8rem,5vw,3.8rem); font-weight: 760; letter-spacing: -.06em; line-height: 1; }
+    .cover-caption { margin: 9px 0 24px; color: #c1d1d5; font-size: .9rem; }
+    .cover-rule { height: 1px; background: rgba(255,255,255,.17); }
+    .cover-bottom { display: flex; justify-content: space-between; align-items: end; gap: 16px; padding-top: 20px; }
+    .cover-bottom p { margin: 0; color: #d9e2e2; font-size: .88rem; }
+    .cover-bottom strong { display: block; margin-bottom: 4px; color: white; font-size: .7rem; letter-spacing: .12em; }
+    .cover-seal { width: 58px; height: 58px; flex: 0 0 58px; display: grid; place-items: center; border: 1px solid rgba(217,189,128,.65); border-radius: 50%; color: #f0d99d; font-size: .68rem; font-weight: 800; text-align: center; line-height: 1.2; }
+    .demo-ribbon { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 8px 0 24px; padding: 12px 16px; border: 1px solid #e4d7b4; border-radius: var(--radius-small); background: var(--gold-soft); }
+    .demo-label { display: flex; align-items: center; gap: 11px; font-weight: 800; color: #574b32; }
+    .demo-icon { width: 30px; height: 30px; flex: 0 0 30px; display: grid; place-items: center; border-radius: 50%; background: white; color: #9a793a; font-size: .8rem; }
+    .demo-ribbon small { color: #776e5c; font-size: .86rem; text-align: right; }
+    .case-index { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 0 auto 20px; }
+    .case-index a { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; padding: 15px 17px; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); box-shadow: var(--shadow); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+    .case-index a:hover { border-color: var(--teal); transform: translateY(-1px); }
+    .case-index strong, .case-index small { display: block; }
+    .case-index strong { margin-bottom: 2px; font-size: .9rem; }
+    .case-index small { color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .case-index-number { color: var(--teal-dark); font-size: .74rem; font-weight: 850; letter-spacing: .06em; white-space: nowrap; }
+    .section { padding: 28px 0 54px; }
+    .section-heading { max-width: 760px; margin-bottom: 22px; }
+    .section-kicker { margin-bottom: 8px; color: var(--teal-dark); font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin-bottom: 8px; font-size: clamp(1.7rem,3.2vw,2.25rem); letter-spacing: -.04em; line-height: 1.18; }
+    .section-lede { max-width: 680px; margin-bottom: 0; color: var(--muted); font-size: .98rem; }
+    .snapshot-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-bottom: 16px; }
+    .metric { min-height: 126px; padding: 17px; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+    .metric-label { display: block; min-height: 2.4em; margin-bottom: 9px; color: var(--muted); font-size: .8rem; font-weight: 700; line-height: 1.35; }
+    .metric-value { display: block; font-size: clamp(1.45rem,2.3vw,1.85rem); font-weight: 780; letter-spacing: -.04em; line-height: 1.08; }
+    .metric-note { display: block; margin-top: 7px; color: var(--muted); font-size: .82rem; }
+    .metric-variance .metric-value { color: var(--teal-dark); }
+    .case-grid { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(300px,.75fr); gap: 16px; align-items: stretch; }
+    .panel { padding: clamp(19px,2.5vw,26px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .panel-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+    .panel h3 { margin-bottom: 5px; font-size: 1.1rem; letter-spacing: -.025em; }
+    .panel-subtitle { margin: 0; color: var(--muted); font-size: .9rem; }
+    .status-chip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border-radius: 999px; background: var(--warning-soft); color: #8a5726; font-size: .74rem; font-weight: 800; white-space: nowrap; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .budget-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 2px 0 12px; color: var(--muted); font-size: .84rem; }
+    .budget-summary span { display: grid; gap: 3px; }
+    .budget-summary strong { color: var(--ink); }
+    .budget-track { position: relative; height: 14px; overflow: visible; border-radius: 999px; background: #e7ece8; }
+    .budget-fill { position: absolute; inset: 0 auto 0 0; width: 92.7%; border-radius: inherit; background: linear-gradient(90deg,#2b8277,#49a091); transition: width .35s ease; }
+    .plan-marker { position: absolute; z-index: 2; top: -5px; left: 94.45%; width: 3px; height: 24px; border-radius: 3px; background: var(--navy); }
+    .plan-marker::after { position: absolute; content: ""; top: -4px; left: -3px; width: 9px; height: 9px; border: 2px solid var(--surface); border-radius: 50%; background: var(--navy); }
+    .legend { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; color: var(--muted); font-size: .82rem; }
+    .legend-item { display: inline-flex; align-items: center; gap: 8px; }
+    .legend-square { width: 10px; height: 10px; border-radius: 3px; background: var(--teal); }
+    .legend-line { width: 12px; height: 3px; border-radius: 2px; background: var(--navy); }
+    .budget-foot { display: grid; gap: 3px; margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    .budget-foot strong { color: var(--ink); }
+    .support-panel { display: flex; flex-direction: column; }
+    .support-count { display: flex; align-items: baseline; gap: 6px; margin: 8px 0 14px; }
+    .support-count strong { font-size: 2.55rem; letter-spacing: -.07em; line-height: 1; }
+    .support-count span { color: var(--muted); font-size: .9rem; }
+    .document-track { display: grid; grid-template-columns: repeat(29,minmax(0,1fr)); gap: 3px; margin-bottom: 18px; }
+    .document-track span { height: 7px; border-radius: 5px; background: #dce7e1; }
+    .document-track span.done { background: var(--teal); }
+    .document-track span.pending { background: var(--gold); }
+    .pending-item { margin-top: auto; padding: 15px; border: 1px solid #efdfc6; border-radius: 13px; background: #fffaf1; }
+    .pending-label { display: block; margin-bottom: 5px; color: #93642f; font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .pending-item p { margin: 0; color: #675b49; font-size: .9rem; }
+    .pending-item strong { color: var(--ink); }
+    .support-panel[data-updated="true"] .status-chip { background: var(--success-soft); color: var(--success); }
+    .support-panel[data-updated="true"] .pending-item { border-color: #cce4d8; background: var(--success-soft); }
+    .support-panel[data-updated="true"] .pending-label { color: var(--success); }
+    .support-panel[data-updated="partial"] .status-chip { background: var(--warning-soft); color: #8a5726; }
+    .support-panel[data-updated="partial"] .pending-item { border-color: #efdfc6; background: #fff8ec; }
+    .support-panel[data-updated="partial"] .pending-label { color: #8a5726; }
+    .decision-section { padding-top: 12px; }
+    .decision-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,.9fr); gap: 16px; align-items: start; }
+    .question-flow { display: grid; gap: 14px; margin-top: 16px; }
+    .question-card[hidden], .final-summary[hidden] { display: none; }
+    .question-card { max-width: 900px; margin-inline: auto; scroll-margin-top: 24px; }
+    .question-card .section-kicker { margin-bottom: 9px; }
+    .question-card h3 { margin-bottom: 8px; }
+    .question-prompt { max-width: 760px; margin: 0; color: var(--muted); font-size: .94rem; }
+    .answer-list { display: grid; gap: 9px; margin-top: 16px; }
+    .answer-choice { width: 100%; display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--ink); text-align: left; cursor: pointer; transition: border-color .18s ease, background .18s ease; }
+    .answer-choice:hover { border-color: #8abbb1; }
+    .answer-choice[aria-pressed="true"] { border-color: var(--teal); background: #f0f7f4; }
+    .answer-choice:disabled { cursor: default; opacity: .78; }
+    .answer-choice:disabled:hover { border-color: var(--line); transform: none; }
+    .answer-marker { width: 19px; height: 19px; flex: 0 0 19px; display: grid; place-items: center; margin-top: 1px; border: 1.5px solid #b5c4c0; border-radius: 50%; color: white; font-size: .67rem; font-weight: 900; }
+    .answer-choice[aria-pressed="true"] .answer-marker { border-color: var(--teal); background: var(--teal); }
+    .answer-choice strong { display: block; margin-bottom: 3px; font-size: .92rem; line-height: 1.4; }
+    .answer-choice small { display: block; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+    .question-feedback { min-height: auto; margin-top: 14px; font-size: .9rem; }
+    .final-summary { max-width: 900px; margin: 14px auto 0; padding: clamp(20px,3.5vw,28px); border: 1px solid #cde2d7; border-radius: 18px; background: var(--success-soft); scroll-margin-top: 24px; }
+    .final-summary h3 { margin-bottom: 8px; font-size: 1.2rem; }
+    .final-summary > p { color: #3c5f53; font-size: .88rem; }
+    .management-note { margin: 14px 0; padding: 15px; border-left: 3px solid var(--teal); border-radius: 0 10px 10px 0; background: rgba(255,255,255,.72); color: #315d54; font-size: .88rem; }
+    .choice-list { display: grid; gap: 9px; margin-top: 16px; }
+    .choice { width: 100%; display: flex; align-items: flex-start; gap: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--ink); text-align: left; cursor: pointer; transition: border-color .18s ease, background .18s ease; }
+    .choice:hover { border-color: #8abbb1; }
+    .choice:disabled { cursor: default; opacity: .78; }
+    .choice:disabled:hover { border-color: var(--line); transform: none; }
+    .choice[aria-pressed="true"] { border-color: var(--teal); background: #f0f7f4; box-shadow: 0 0 0 2px rgba(38,127,118,.08); }
+    .choice-marker { width: 20px; height: 20px; flex: 0 0 20px; display: grid; place-items: center; margin-top: 1px; border: 1.5px solid #b5c4c0; border-radius: 50%; color: white; font-size: .7rem; font-weight: 900; }
+    .choice[aria-pressed="true"] .choice-marker { border-color: var(--teal); background: var(--teal); }
+    .choice strong { display: block; margin-bottom: 3px; font-size: .92rem; line-height: 1.4; }
+    .choice small { display: block; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+    .decision-feedback { min-height: auto; margin: 16px 0 0; padding: 13px 15px; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; background: #fbf8ee; color: #645b47; font-size: .9rem; line-height: 1.55; }
+    .decision-feedback[data-tone="good"] { border-left-color: var(--teal); background: var(--teal-soft); color: #315d54; }
+    .decision-feedback[data-tone="caution"] { border-left-color: var(--warning); background: var(--warning-soft); color: #76552f; }
+    .simulation-panel { background: #f9fbf8; }
+    .step-label { margin-bottom: 9px; color: var(--teal-dark); font-size: .74rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .simulation-panel h3 { font-size: 1.22rem; }
+    .simulation-panel > p { color: var(--muted); font-size: .92rem; }
+    .update-status { display: flex; align-items: center; gap: 10px; margin: 16px 0; padding: 12px; border-radius: 12px; background: white; color: var(--muted); font-size: .87rem; }
+    .update-status .status-dot { color: var(--gold); }
+    .update-status[data-updated="true"] { background: var(--success-soft); color: var(--success); }
+    .update-status[data-updated="true"] .status-dot { color: var(--success); }
+    .update-status[data-updated="partial"] { background: var(--warning-soft); color: #76552f; }
+    .outcome { margin-top: 16px; padding: 15px; border: 1px solid #cde2d7; border-radius: 13px; background: var(--success-soft); }
+    .outcome[hidden] { display: none; }
+    .outcome[data-tone="caution"] { border-color: #efdfc6; background: #fff8ec; }
+    .outcome[data-tone="partial"] { border-color: #efdfc6; background: #fff8ec; }
+    .outcome-label { display: block; margin-bottom: 6px; color: var(--success); font-size: .74rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    .outcome[data-tone="caution"] .outcome-label { color: #8a5726; }
+    .outcome[data-tone="partial"] .outcome-label { color: #8a5726; }
+    .outcome p { margin: 0; color: #3c5f53; font-size: .84rem; }
+    .outcome[data-tone="caution"] p { color: #675b49; }
+    .outcome[data-tone="partial"] p { color: #675b49; }
+    .timeline { display: grid; gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; }
+    .timeline li { display: grid; grid-template-columns: 14px 1fr; gap: 10px; color: var(--muted); font-size: .84rem; }
+    .timeline-mark { position: relative; width: 10px; height: 10px; margin-top: 5px; border: 2px solid #c4d4ce; border-radius: 50%; background: white; }
+    .timeline li:not(:last-child) .timeline-mark::after { position: absolute; content: ""; top: 8px; left: 2px; width: 2px; height: 24px; background: #dce6e1; }
+    .timeline li.complete .timeline-mark { border-color: var(--teal); background: var(--teal); }
+    .timeline strong { display: block; margin-bottom: 2px; color: var(--ink); font-size: .84rem; }
+    .asset-section { padding-top: 12px; }
+    .asset-grid { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 16px; align-items: start; }
+    .asset-summary-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; margin: 16px 0 20px; }
+    .closeout-summary-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .asset-stat { padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: #f9fbf8; }
+    .asset-stat strong { display: block; margin-bottom: 3px; font-size: 1.35rem; letter-spacing: -.04em; line-height: 1.15; }
+    .asset-stat span { display: block; color: var(--muted); font-size: .76rem; line-height: 1.35; }
+    .asset-exception-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .asset-exception { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: start; padding: 13px; border: 1px solid #efdfc6; border-radius: 12px; background: #fffaf1; }
+    .asset-exception strong { display: block; margin-bottom: 3px; font-size: .88rem; }
+    .asset-exception small { display: block; color: #675b49; font-size: .8rem; line-height: 1.45; }
+    .asset-code { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; white-space: nowrap; }
+    .asset-small-note { margin: 14px 0 0; color: var(--muted); font-size: .78rem; }
+    .asset-choice-group { display: grid; gap: 9px; margin: 14px 0; }
+    .asset-choice-group .answer-choice { padding: 12px; }
+    .asset-followup[hidden], .asset-final[hidden] { display: none; }
+    .asset-followup { margin-top: 20px; padding-top: 19px; border-top: 1px solid var(--line); }
+    .asset-followup h4 { margin: 0 0 6px; font-size: 1rem; letter-spacing: -.02em; }
+    .asset-followup > p { margin-bottom: 0; color: var(--muted); font-size: .86rem; }
+    .asset-update { margin-top: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 13px; background: white; }
+    .asset-update[data-tone="good"] { border-color: #cde2d7; background: var(--success-soft); }
+    .asset-update[data-tone="caution"] { border-color: #efdfc6; background: #fff8ec; }
+    .asset-update-label { display: block; margin-bottom: 5px; color: var(--teal-dark); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .asset-update[data-tone="caution"] .asset-update-label { color: #8a5726; }
+    .asset-update p { margin: 0; color: #40545b; font-size: .84rem; line-height: 1.55; }
+    .asset-final { margin-top: 14px; padding: 14px; border-left: 3px solid var(--teal); border-radius: 0 10px 10px 0; background: var(--teal-soft); color: #315d54; font-size: .86rem; }
+    .asset-final[data-tone="caution"] { border-left-color: var(--warning); background: var(--warning-soft); color: #76552f; }
+    .asset-final strong { display: block; margin-bottom: 4px; color: var(--ink); }
+    .assumption-note { display: grid; grid-template-columns: 32px 1fr; gap: 13px; margin-top: 18px; padding: 19px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.54); color: var(--muted); font-size: .82rem; }
+    .note-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-deep); color: var(--navy); font-weight: 800; }
+    .assumption-note p { margin: 0; }
+    .assumption-note strong { color: var(--ink); }
+    .experience-section { padding: 4px 0 74px; }
+    .experience-box { padding: clamp(22px,4vw,38px); border-radius: 26px; background: #e9eeea; }
+    .experience-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; margin-bottom: 22px; }
+    .verified-label { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; color: var(--teal-dark); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .verified-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+    .experience-box h2 { max-width: 620px; margin-bottom: 0; font-size: clamp(1.5rem,3vw,2.05rem); }
+    .experience-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(185px,1fr)); gap: 11px; }
+    .experience-stat { min-height: 112px; padding: 16px; border: 1px solid rgba(23,51,71,.09); border-radius: 12px; background: rgba(255,255,255,.78); }
+    .experience-stat strong { display: block; margin-bottom: 7px; font-size: 1.35rem; letter-spacing: -.04em; }
+    .experience-stat span { display: block; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+    .closing { padding: 26px 0 58px; text-align: center; }
+    .closing-inner { padding: clamp(28px,5vw,48px); border-radius: 26px; background: var(--navy); color: white; }
+    .closing .eyebrow { justify-content: center; color: #a9d3c8; }
+    .closing h2 { max-width: 600px; margin-inline: auto; color: white; }
+    .closing p { max-width: 580px; margin: 0 auto 20px; color: #ccd9da; }
+    .closing .button { background: #f3f2e9; color: var(--navy); }
+    .closing .button:hover { background: white; }
+    footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 14px; }
+    footer a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    :focus-visible { outline: 3px solid #c79537; outline-offset: 3px; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: minmax(0,1.1fr) minmax(280px,.9fr); gap: 32px; }
+      .snapshot-grid { grid-template-columns: repeat(2,1fr); }
+      .experience-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+    }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 32px,560px); }
+      .header-inner { min-height: 68px; }
+      .header-link { padding: 9px 13px; font-size: .78rem; }
+      .hero { padding: 52px 0 32px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .case-cover { min-height: 300px; }
+      .cover-amount { margin-top: 34px; }
+      .demo-ribbon { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .demo-ribbon small { padding-left: 41px; text-align: left; }
+      .case-index { grid-template-columns: 1fr; }
+      .case-grid, .decision-grid, .asset-grid { grid-template-columns: 1fr; }
+      .section { padding-bottom: 48px; }
+      .experience-top { flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand { font-size: .74rem; }
+      .brand-mark { width: 38px; height: 38px; }
+      .header-link { gap: 6px; padding: 9px 10px; font-size: .73rem; }
+      .snapshot-grid { gap: 8px; }
+      .metric { min-height: 125px; padding: 14px; }
+      .metric-value { font-size: 1.45rem; }
+      .panel { padding: 19px; }
+      .panel-title-row { flex-direction: column; }
+      .experience-grid { grid-template-columns: 1fr; gap: 8px; }
+      .experience-stat { padding: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../" aria-label="John Gabriel Mmbando front page">
+        <span class="brand-mark" aria-hidden="true">JM</span>
+        <span>JOHN GABRIEL MMBANDO<small>GRANTS &amp; FINANCE</small></span>
+      </a>
+      <a class="header-link" href="../">Back to front page <span aria-hidden="true">←</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Grants &amp; finance · Interactive portfolio</p>
+          <h1>From evidence<br>to <span>action.</span></h1>
+          <p class="hero-copy">Explore four short simulations in grant accountability, field verification, funding requests, and closeout. Choose an action to see a fictional case response.</p>
+          <div class="hero-actions">
+            <a class="button" href="#cases">Explore four cases <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="#experience">Verified experience</a>
+          </div>
+        </div>
+        <aside class="case-cover" aria-label="Four fictional portfolio cases">
+          <div class="cover-top">
+            <span class="cover-code">PORTFOLIO · CASES 01–04</span>
+            <span class="cover-pill">Static · demo</span>
+          </div>
+          <span class="cover-amount">04</span>
+          <p class="cover-caption">Independent case studies</p>
+          <div class="cover-rule"></div>
+          <div class="cover-bottom">
+            <p><strong>THE APPROACH</strong>Follow the evidence.<br>Record the next action.</p>
+            <span class="cover-seal">SYNTH<br>CASES</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="demo-ribbon" role="note">
+        <div class="demo-label"><span class="demo-icon" aria-hidden="true">i</span> Synthetic data · simulated updates</div>
+        <small>Four independent case studies · no live systems connected</small>
+      </div>
+    </div>
+
+    <nav class="wrap case-index" id="cases" aria-label="Choose an interactive case">
+      <a href="#grantpulse-case"><span><strong>GrantPulse</strong><small>Grant accountability, budget monitoring, and records follow-up</small></span><span class="case-index-number" aria-hidden="true">CASE 01 ↓</span></a>
+      <a href="#asset-case"><span><strong>FieldProof</strong><small>Field verification and evidence-led asset follow-up</small></span><span class="case-index-number" aria-hidden="true">CASE 02 ↓</span></a>
+      <a href="#request-case"><span><strong>RequestReady</strong><small>Partner funding request reconciliation and review</small></span><span class="case-index-number" aria-hidden="true">CASE 03 ↓</span></a>
+      <a href="#closeout-case"><span><strong>Closeout Compass</strong><small>Final report, ledger, and balance review</small></span><span class="case-index-number" aria-hidden="true">CASE 04 ↓</span></a>
+    </nav>
+
+    <section class="case-study" id="grantpulse-case" aria-labelledby="grantpulseTitle">
+    <section class="section" id="case">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-kicker">Case 01 · GrantPulse</p>
+          <h2 id="grantpulseTitle">Spending is below plan. Four records are pending.</h2>
+          <p class="section-lede">Fictional quarterly review · Sample Programme · Demo Partner A. Compare planned spending, recorded spending, and records on file.</p>
+        </div>
+        <div class="snapshot-grid" aria-label="Synthetic case figures">
+          <article class="metric"><span class="metric-label">Quarterly budget</span><strong class="metric-value">TZS 537.0M</strong><span class="metric-note">Fictional case figure</span></article>
+          <article class="metric"><span class="metric-label">Planned spending to date</span><strong class="metric-value">TZS 507.2M</strong><span class="metric-note">94.5% of quarter budget</span></article>
+          <article class="metric"><span class="metric-label">Recorded expenditure</span><strong class="metric-value">TZS 497.8M</strong><span class="metric-note">92.7% of quarter budget used</span></article>
+          <article class="metric metric-variance"><span class="metric-label">Difference from plan</span><strong class="metric-value">−TZS 9.4M</strong><span class="metric-note">1.9% below planned spending</span></article>
+        </div>
+        <div class="case-grid">
+          <article class="panel">
+            <div class="panel-title-row">
+              <div><h3>Budget position</h3><p class="panel-subtitle">Plan, spending, and full budget.</p></div>
+              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span> Below plan · follow up</span>
+            </div>
+            <div class="budget-summary"><span>Plan to date <strong>TZS 507.2M</strong></span><span>Full budget <strong>TZS 537.0M</strong></span></div>
+            <div class="budget-track" role="img" aria-label="Recorded expenditure is 92.7 percent of the quarterly budget. Planned spending to date is 94.5 percent.">
+              <span class="budget-fill"></span><span class="plan-marker"></span>
+            </div>
+            <div class="legend" aria-hidden="true">
+              <span class="legend-item"><span class="legend-square"></span>Recorded 92.7%</span>
+              <span class="legend-item"><span class="legend-line"></span>Plan to date 94.5%</span>
+            </div>
+            <div class="budget-foot"><span>Difference from plan</span><strong>−TZS 9.4M · 1.9% below plan</strong></div>
+          </article>
+          <article class="panel support-panel" id="supportPanel" data-updated="false">
+            <div class="panel-title-row">
+              <div><h3>Supporting records</h3><p class="panel-subtitle">File completeness in this sample.</p></div>
+              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span><span id="recordStatus">4 pending</span></span>
+            </div>
+            <div class="support-count"><strong id="recordsCount">25</strong><span>of 29 records complete</span></div>
+            <div class="document-track" id="documentTrack" role="img" aria-label="25 of 29 supporting records complete">
+              <span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="pending"></span><span class="pending"></span><span class="pending"></span><span class="pending"></span>
+            </div>
+            <div class="pending-item">
+              <span class="pending-label" id="pendingLabel">Awaiting support</span>
+              <p id="pendingText">A <strong>TZS 21.2M</strong> expenditure line awaits a supporting schedule and attendance record.</p>
+            </div>
+          </article>
+        </div>
+        <div class="assumption-note">
+          <span class="note-mark" aria-hidden="true">i</span>
+          <p><strong>How to read this case:</strong> spending is TZS 9.4M below plan; that does not by itself explain the difference. Assumption for the request path: the schedule and attendance record are two of four pending records, moving completeness from 25/29 to 27/29 if received. The other two records are unspecified. All figures are synthetic and do not represent a donor threshold or policy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section decision-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-kicker">GrantPulse · Review decisions</p>
+          <h2>Follow the evidence, then decide what to do next.</h2>
+          <p class="section-lede">Choose a response at each step. Feedback is prewritten for this fictional case.</p>
+        </div>
+        <div class="decision-grid">
+          <article class="panel">
+            <div class="panel-title-row"><div><h3>What would you do first?</h3><p class="panel-subtitle">A schedule and attendance record are missing.</p></div></div>
+            <div class="choice-list" role="group" aria-label="Choose a follow-up action">
+              <button class="choice" type="button" data-choice="request" aria-pressed="false">
+                <span class="choice-marker" aria-hidden="true"></span>
+                <span><strong>Request the missing records</strong><small>Keep the review open and assess the variance separately.</small></span>
+              </button>
+              <button class="choice" type="button" data-choice="approve" aria-pressed="false">
+                <span class="choice-marker" aria-hidden="true"></span>
+                <span><strong>Clear the line before checking support</strong><small>This leaves the missing records unresolved.</small></span>
+              </button>
+              <button class="choice" type="button" data-choice="reject" aria-pressed="false">
+                <span class="choice-marker" aria-hidden="true"></span>
+                <span><strong>Reject it because records are missing</strong><small>Missing records do not establish a final conclusion by themselves.</small></span>
+              </button>
+            </div>
+            <p class="decision-feedback" id="decisionFeedback" data-tone="neutral" role="status" aria-live="polite">Select an option to see how it handles the available evidence.</p>
+          </article>
+          <article class="panel simulation-panel">
+            <p class="step-label">GrantPulse · Automatic simulated update</p>
+            <h3>The case responds to your choice</h3>
+            <p>Choose an action. The case responds automatically with a result that reflects your choice.</p>
+            <div class="update-status" id="updateStatus" data-updated="false" role="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span id="updateStatusText">Waiting for your choice · update is automatic</span></div>
+            <div class="outcome" id="outcome" hidden>
+              <span class="outcome-label" id="outcomeLabel">Case response</span>
+              <p id="outcomeText"></p>
+            </div>
+            <ol class="timeline" aria-label="Case activity">
+              <li class="complete"><span class="timeline-mark" aria-hidden="true"></span><span><strong>Initial review</strong>25 of 29 supporting records available.</span></li>
+              <li id="timelineUpdate"><span class="timeline-mark" aria-hidden="true"></span><span><strong>Automatic case response</strong><span id="timelineText">Not yet shown.</span></span></li>
+            </ol>
+          </article>
+        </div>
+        <div class="question-flow" aria-label="Further review decisions">
+          <section class="question-card" id="varianceQuestion" hidden aria-labelledby="varianceTitle">
+            <article class="panel">
+              <p class="section-kicker">GrantPulse · Interpret the variance</p>
+              <h3 id="varianceTitle">How should you read TZS 9.4M below plan?</h3>
+              <p class="question-prompt">TZS 497.8M has been recorded against TZS 507.2M planned to date. Spending is 92.7% of the quarter budget.</p>
+              <div class="answer-list" role="group" aria-label="Choose how to interpret the variance">
+                <button class="answer-choice" type="button" data-tone="good" data-response="Good next step: compare timing and activities with the approved plan, then ask what explains the TZS 9.4M difference below plan. A below-plan figure alone does not show whether activities were delayed, changed, or completed at lower cost." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Check timing and activities; ask why spending is below plan</strong><small>Keep this review separate from the missing-support follow-up.</small></span></button>
+                <button class="answer-choice" type="button" data-tone="caution" data-response="The case shows spending below plan, not a confirmed compliance breach. Check the approved budget, activity timing, and supporting evidence before recording a conclusion." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Record the difference as confirmed non-compliance</strong><small>This makes a conclusion the figures alone do not support.</small></span></button>
+                <button class="answer-choice" type="button" data-tone="caution" data-response="Using 92.7% of the full budget does not explain why spending is TZS 9.4M below the plan to date. Check timing and activities before closing this review point." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Close it because most of the budget has been used</strong><small>This overlooks the remaining difference from plan.</small></span></button>
+              </div>
+              <p class="decision-feedback question-feedback" id="varianceFeedback" data-tone="neutral" role="status" aria-live="polite">Choose an interpretation to see simulated review feedback.</p>
+            </article>
+          </section>
+
+          <section class="question-card" id="trackingQuestion" hidden aria-labelledby="trackingTitle">
+            <article class="panel">
+              <p class="section-kicker">GrantPulse · Make follow-up actionable</p>
+              <h3 id="trackingTitle">How would you track the follow-up?</h3>
+              <p class="question-prompt" id="trackingPrompt">The supporting records have arrived, but the variance still needs a documented explanation.</p>
+              <div class="answer-list" role="group" aria-label="Choose how to track the variance follow-up">
+                <button class="answer-choice" type="button" data-tone="good" data-response="Record each open question, assign an owner, set a due date, and revisit it at the next review. Close each item only after checking the explanation against the plan and supporting records." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Record an owner, due date, and next review</strong><small>Keep each unresolved item open until it is checked.</small></span></button>
+                <button class="answer-choice" type="button" data-tone="caution" data-response="A note without an owner or review date can lose momentum. In a real process, use the agreed follow-up tracker and responsibilities; this demo does not prescribe an employer-specific workflow." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Write “awaiting explanation” with no owner or date</strong><small>The issue is recorded, but nobody is clearly responsible for moving it.</small></span></button>
+                <button class="answer-choice" type="button" data-tone="caution" data-response="An explanation is evidence to assess, not automatic clearance. Check whether it is consistent with the approved plan and available support before closing the point." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Close the issue as soon as an explanation arrives</strong><small>This skips the check of whether the explanation is supported.</small></span></button>
+              </div>
+              <p class="decision-feedback question-feedback" id="trackingFeedback" data-tone="neutral" role="status" aria-live="polite">Choose a tracking approach to see simulated review feedback.</p>
+            </article>
+          </section>
+
+          <section class="question-card" id="summaryQuestion" hidden aria-labelledby="summaryTitle">
+            <article class="panel">
+              <p class="section-kicker">GrantPulse · Communicate the position</p>
+              <h3 id="summaryTitle">Which summary fits the evidence?</h3>
+              <p class="question-prompt">A concise update should distinguish what is complete from what is unresolved.</p>
+              <div class="answer-list" role="group" aria-label="Choose a management summary">
+                <button class="answer-choice" id="summaryBestAnswer" type="button" data-tone="good" data-response="This summary reports what is complete, states the variance, and names the next step without treating an open question as a finding." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong id="summaryBestLabel">Records are complete; the variance remains open for explanation</strong><small>Report the facts and next step without claiming a breach.</small></span></button>
+                <button class="answer-choice" id="summaryOtherAnswer" type="button" data-tone="caution" data-response="Using less than the full budget does not resolve the difference from plan or the pending records. Include both follow-up points." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong id="summaryOtherLabel">Close the review because spending is within budget</strong><small>This overlooks the plan difference and pending records.</small></span></button>
+                <button class="answer-choice" type="button" data-tone="caution" data-response="The available facts do not establish non-compliance. A neutral summary should report the variance, note that an explanation is pending, and state the review step." aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>The partner is non-compliant</strong><small>This goes beyond what the fictional case evidence demonstrates.</small></span></button>
+              </div>
+              <p class="decision-feedback question-feedback" id="summaryFeedback" data-tone="neutral" role="status" aria-live="polite">Choose a summary to see simulated review feedback.</p>
+            </article>
+          </section>
+
+          <section class="final-summary" id="finalSummary" hidden aria-labelledby="finalSummaryTitle" tabindex="-1" role="region">
+            <p class="section-kicker">Review complete · fictional case</p>
+            <h3 id="finalSummaryTitle">A clear note separates status from conclusion.</h3>
+            <p>This is a sample wording exercise, not a record of work performed or a finding about a real partner.</p>
+            <blockquote class="management-note" id="managementNote">“Four supporting records remain pending, including a schedule and attendance record for the TZS 21.2M line. Recorded expenditure is TZS 9.4M (1.9%) below plan to date. The documentation and spending difference require separate follow-up.”</blockquote>
+            <p>Keep the evidence, open question, owner, and next review visible. Avoid conclusions the figures do not prove.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <section class="section asset-section" id="asset-case" aria-labelledby="fieldProofTitle">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-kicker">Case 02 · FieldProof · Field verification</p>
+          <h2 id="fieldProofTitle">Trace each exception to the evidence.</h2>
+          <p class="section-lede">A short asset-verification exercise: separate a record mismatch from an item not sighted, choose a follow-up, and see the simulated review response.</p>
+        </div>
+        <div class="asset-grid">
+          <article class="panel" aria-labelledby="assetOverviewTitle">
+            <div class="panel-title-row">
+              <div><h3 id="assetOverviewTitle">Sample verification results</h3><p class="panel-subtitle">12 fictional asset records · no site details</p></div>
+              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Synthetic sample</span>
+            </div>
+            <div class="asset-summary-grid" aria-label="Synthetic verification summary">
+              <div class="asset-stat"><strong>12</strong><span>records sampled</span></div>
+              <div class="asset-stat"><strong>10</strong><span>matched to register</span></div>
+              <div class="asset-stat"><strong>2</strong><span>exceptions open</span></div>
+            </div>
+            <ul class="asset-exception-list" aria-label="Open synthetic exceptions">
+              <li class="asset-exception"><span><strong>Identifier mismatch</strong><small>Item sighted; identifier differs from the register.</small></span><span class="asset-code">ASSET 07</span></li>
+              <li class="asset-exception"><span><strong>Not sighted</strong><small>Item not located during this sample visit; status unconfirmed.</small></span><span class="asset-code">ASSET 11</span></li>
+            </ul>
+            <p class="asset-small-note">Sample labels only. A mismatch and an item not sighted are separate exceptions.</p>
+          </article>
+
+          <article class="panel" aria-labelledby="assetDecisionTitle">
+            <p class="step-label">Interactive decision · 1 of 2</p>
+            <h3 id="assetDecisionTitle">What would you do first?</h3>
+            <p class="panel-subtitle">Choose a response. You can revise it and the case will update automatically.</p>
+            <div class="asset-choice-group" id="assetActionButtons" role="group" aria-label="Choose how to triage the asset exceptions">
+              <button class="answer-choice" type="button" data-asset-action="separate" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Separate and assign the two follow-ups</strong><small>Check the identifier mismatch and seek evidence for the item not sighted.</small></span></button>
+              <button class="answer-choice" type="button" data-asset-action="missing" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Treat both items as missing</strong><small>This may overstate what the field evidence shows.</small></span></button>
+              <button class="answer-choice" type="button" data-asset-action="edit" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Change the register from field notes now</strong><small>This risks losing the original record and correction trail.</small></span></button>
+            </div>
+            <div class="asset-update" id="assetUpdate" data-tone="neutral" role="status" aria-live="polite">
+              <span class="asset-update-label" id="assetUpdateLabel">Synthetic response</span>
+              <p id="assetUpdateText">Select an action to see the fictional case response.</p>
+            </div>
+
+            <div class="asset-followup" id="assetFollowup" hidden aria-labelledby="assetEvidenceTitle">
+              <p class="step-label">Interactive decision · 2 of 2</p>
+              <h4 id="assetEvidenceTitle">What evidence would support closing each follow-up?</h4>
+              <p>Consider the two exceptions separately. This sample illustrates a review approach; real requirements depend on the applicable policy.</p>
+              <div class="asset-choice-group" id="assetEvidenceButtons" role="group" aria-label="Choose evidence for closing the exceptions">
+                <button class="answer-choice" type="button" data-asset-evidence="specific" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Check item-specific evidence and document the review</strong><small>Use an identifier cross-check for Asset 07 and re-sighting or reviewed custody evidence for Asset 11.</small></span></button>
+                <button class="answer-choice" type="button" data-asset-evidence="verbal" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Accept verbal confirmation and close both</strong><small>This does not leave a checkable record of either item.</small></span></button>
+                <button class="answer-choice" type="button" data-asset-evidence="majority" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Close them because 10 of 12 records matched</strong><small>The overall match count does not resolve either exception.</small></span></button>
+              </div>
+              <p class="decision-feedback" id="assetEvidenceFeedback" data-tone="neutral" role="status" aria-live="polite">Choose an evidence approach to see review feedback.</p>
+              <div class="asset-final" id="assetFinal" data-tone="good" hidden role="status" aria-live="polite">
+                <strong id="assetFinalLabel">Case position</strong>
+                <span id="assetFinalText"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="assumption-note">
+          <span class="note-mark" aria-hidden="true">i</span>
+          <p><strong>Fictional case:</strong> the 12 records, asset labels, exceptions, and simulated responses are invented for this demonstration. They are separate from the verified fieldwork achievement listed below; no employer, partner, facility, or location records are used.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section asset-section" id="request-case" aria-labelledby="requestTitle">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-kicker">Case 03 · RequestReady · Funding request review</p>
+          <h2 id="requestTitle">Reconcile the request before it moves forward.</h2>
+          <p class="section-lede">Compare a fictional funding request with its line-item schedule. Find the unexplained difference, then choose a clear evidence-based follow-up.</p>
+        </div>
+        <div class="asset-grid">
+          <article class="panel" aria-labelledby="requestOverviewTitle">
+            <div class="panel-title-row">
+              <div><h3 id="requestOverviewTitle">Request figures</h3><p class="panel-subtitle">Synthetic funding request · TZS</p></div>
+              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Reconciliation open</span>
+            </div>
+            <div class="asset-summary-grid" aria-label="Synthetic funding request figures">
+              <div class="asset-stat"><strong>42.0M</strong><span>requested total</span></div>
+              <div class="asset-stat"><strong>39.5M</strong><span>line-item schedule</span></div>
+              <div class="asset-stat"><strong>2.5M</strong><span>difference to explain</span></div>
+            </div>
+            <ul class="asset-exception-list" aria-label="Request review finding">
+              <li class="asset-exception"><span><strong>Totals do not reconcile</strong><small>The request is TZS 2.5M higher than the supplied schedule. The case provides no explanation for the difference.</small></span><span class="asset-code">CHECK 01</span></li>
+            </ul>
+            <p class="asset-small-note">The amounts and request pack are fictional. No eligibility threshold or donor rule is assumed.</p>
+          </article>
+
+          <article class="panel" aria-labelledby="requestDecisionTitle">
+            <p class="step-label">Interactive decision · 1 of 2</p>
+            <h3 id="requestDecisionTitle">What would you do first?</h3>
+            <p class="panel-subtitle">Choose an action. The fictional review response updates automatically.</p>
+            <div class="asset-choice-group" id="requestActionButtons" role="group" aria-label="Choose a first action for the request review">
+              <button class="answer-choice" type="button" data-request-action="query" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Hold and request a line-by-line reconciliation</strong><small>Keep the request pending while the TZS 2.5M difference is explained.</small></span></button>
+              <button class="answer-choice" type="button" data-request-action="approve" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Approve because the total seems reasonable</strong><small>This leaves the difference unexplained.</small></span></button>
+              <button class="answer-choice" type="button" data-request-action="reduce" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Change the request total to match the schedule</strong><small>This changes the submitted amount without confirmation.</small></span></button>
+            </div>
+            <div class="asset-update" id="requestUpdate" data-tone="neutral" role="status" aria-live="polite">
+              <span class="asset-update-label" id="requestUpdateLabel">Synthetic response</span>
+              <p id="requestUpdateText">Select an action to see the fictional case response.</p>
+            </div>
+
+            <div class="asset-followup" id="requestFollowup" hidden aria-labelledby="requestEvidenceTitle">
+              <p class="step-label">Interactive decision · 2 of 2</p>
+              <h4 id="requestEvidenceTitle">What would close the reconciliation gap?</h4>
+              <p>Choose a check that preserves the submitted record and makes any correction traceable.</p>
+              <div class="asset-choice-group" id="requestEvidenceButtons" role="group" aria-label="Choose evidence to reconcile the funding request">
+                <button class="answer-choice" type="button" data-request-evidence="reconcile" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Reconcile the schedule to the request and document any approved revision</strong><small>Identify the line causing the TZS 2.5M difference and keep the supporting trail.</small></span></button>
+                <button class="answer-choice" type="button" data-request-evidence="summary" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Change only the summary figure to match the schedule</strong><small>This leaves the request and supporting schedule inconsistent.</small></span></button>
+                <button class="answer-choice" type="button" data-request-evidence="verbal" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Accept a verbal explanation and continue</strong><small>This does not document how the two totals reconcile.</small></span></button>
+              </div>
+              <p class="decision-feedback" id="requestEvidenceFeedback" data-tone="neutral" role="status" aria-live="polite">Choose a reconciliation check to see review feedback.</p>
+              <div class="asset-final" id="requestFinal" data-tone="good" hidden role="status" aria-live="polite"><strong id="requestFinalLabel">Case position</strong><span id="requestFinalText"></span></div>
+            </div>
+          </article>
+        </div>
+        <div class="assumption-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Fictional case:</strong> TZS 42.0M, TZS 39.5M, and the TZS 2.5M difference are synthetic. The case demonstrates reconciliation judgment; it does not describe a real request or prescribe an employer's approval process.</p></div>
+      </div>
+    </section>
+
+    <section class="section asset-section" id="closeout-case" aria-labelledby="closeoutTitle">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="section-kicker">Case 04 · Closeout Compass · Financial closeout</p>
+          <h2 id="closeoutTitle">Close the numbers before closing the file.</h2>
+          <p class="section-lede">Review a fictional closeout pack. The ledger and remaining balance reconcile to the approved funds, while the final report shows a separate difference.</p>
+        </div>
+        <div class="asset-grid">
+          <article class="panel" aria-labelledby="closeoutOverviewTitle">
+            <div class="panel-title-row">
+              <div><h3 id="closeoutOverviewTitle">Closeout figures</h3><p class="panel-subtitle">Synthetic financial closeout · TZS</p></div>
+              <span class="status-chip"><span class="status-dot" aria-hidden="true"></span>Review still open</span>
+            </div>
+            <div class="asset-summary-grid closeout-summary-grid" aria-label="Synthetic closeout figures">
+              <div class="asset-stat"><strong>100.0M</strong><span>approved funds</span></div>
+              <div class="asset-stat"><strong>96.0M</strong><span>final report expenditure</span></div>
+              <div class="asset-stat"><strong>95.5M</strong><span>ledger expenditure</span></div>
+              <div class="asset-stat"><strong>4.5M</strong><span>closing balance</span></div>
+            </div>
+            <ul class="asset-exception-list" aria-label="Closeout checks">
+              <li class="asset-exception"><span><strong>Ledger plus balance</strong><small>TZS 95.5M + TZS 4.5M = TZS 100.0M approved funds.</small></span><span class="asset-code">TIES OUT</span></li>
+              <li class="asset-exception"><span><strong>Report versus ledger</strong><small>Reported expenditure is TZS 0.5M higher than ledger expenditure; the cause is unknown.</small></span><span class="asset-code">OPEN</span></li>
+            </ul>
+            <p class="asset-small-note">The figures do not establish whether a cost is eligible or how the balance must be handled.</p>
+          </article>
+
+          <article class="panel" aria-labelledby="closeoutDecisionTitle">
+            <p class="step-label">Interactive decision · 1 of 2</p>
+            <h3 id="closeoutDecisionTitle">What would you do before recommending closeout?</h3>
+            <p class="panel-subtitle">Choose a response. The case updates automatically and remains fictional.</p>
+            <div class="asset-choice-group" id="closeoutActionButtons" role="group" aria-label="Choose a first action for closeout">
+              <button class="answer-choice" type="button" data-closeout-action="reconcile" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Reconcile the report and document the balance disposition</strong><small>Keep the TZS 0.5M difference open and establish how the TZS 4.5M balance is treated.</small></span></button>
+              <button class="answer-choice" type="button" data-closeout-action="tieout" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Close because ledger plus balance equals approved funds</strong><small>This overlooks the difference in reported expenditure.</small></span></button>
+              <button class="answer-choice" type="button" data-closeout-action="deduct" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Classify the TZS 0.5M difference as ineligible</strong><small>The figures do not establish ineligibility.</small></span></button>
+            </div>
+            <div class="asset-update" id="closeoutUpdate" data-tone="neutral" role="status" aria-live="polite">
+              <span class="asset-update-label" id="closeoutUpdateLabel">Synthetic response</span>
+              <p id="closeoutUpdateText">Select an action to see the fictional case response.</p>
+            </div>
+
+            <div class="asset-followup" id="closeoutFollowup" hidden aria-labelledby="closeoutEvidenceTitle">
+              <p class="step-label">Interactive decision · 2 of 2</p>
+              <h4 id="closeoutEvidenceTitle">Which conclusion fits the figures?</h4>
+              <p>Separate what reconciles from what still needs explanation or policy-based review.</p>
+              <div class="asset-choice-group" id="closeoutEvidenceButtons" role="group" aria-label="Choose a conclusion for the closeout figures">
+                <button class="answer-choice" type="button" data-closeout-evidence="hold" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Keep closeout open; trace the TZS 0.5M and document balance treatment</strong><small>Do not infer a cause or eligibility outcome from the totals alone.</small></span></button>
+                <button class="answer-choice" type="button" data-closeout-evidence="spent" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Report that all approved funds were spent</strong><small>The TZS 4.5M closing balance contradicts this statement.</small></span></button>
+                <button class="answer-choice" type="button" data-closeout-evidence="ineligible" aria-pressed="false"><span class="answer-marker" aria-hidden="true"></span><span><strong>Record the TZS 0.5M as ineligible expenditure</strong><small>No supporting detail here identifies the cause or eligibility of the difference.</small></span></button>
+              </div>
+              <p class="decision-feedback" id="closeoutEvidenceFeedback" data-tone="neutral" role="status" aria-live="polite">Choose a conclusion to see review feedback.</p>
+              <div class="asset-final" id="closeoutFinal" data-tone="good" hidden role="status" aria-live="polite"><strong id="closeoutFinalLabel">Case position</strong><span id="closeoutFinalText"></span></div>
+            </div>
+          </article>
+        </div>
+        <div class="assumption-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Fictional case:</strong> all four closeout amounts are invented. The TZS 0.5M difference and TZS 4.5M balance are prompts for review, not findings about a real partner or donor requirement.</p></div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="wrap">
+        <div class="experience-box">
+          <div class="experience-top">
+            <div><span class="verified-label">Verified portfolio experience · separate from this simulation</span><h2>Grounded in practical grants and financial oversight.</h2></div>
+            <a class="header-link" href="https://johngabri.github.io/john-mmbando-portfolio/#experience">View experience <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="experience-grid">
+            <div class="experience-stat"><strong>TZS 2.5B+</strong><span>Partner accountabilities reviewed</span></div>
+            <div class="experience-stat"><strong>45+</strong><span>Field monitoring and verification visits</span></div>
+            <div class="experience-stat"><strong>20+</strong><span>Staff and implementing partners supported through training</span></div>
+            <div class="experience-stat"><strong>500+ assets</strong><span>Verified across 101 health facilities in two weeks</span></div>
+            <div class="experience-stat"><strong>150+ requests</strong><span>Reviewed; contributed to 25% fewer submission errors</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <div class="closing-inner">
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Accountable finance starts with clear evidence.</h2>
+          <p>I welcome conversations about grants management, financial monitoring, compliance, risk, and financial analysis opportunities.</p>
+          <a class="button" href="mailto:johnmmbando24@gmail.com?subject=Professional%20inquiry%20%E2%80%94%20John%20Gabriel%20Mmbando">Contact John <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>Four fictional grants and finance case studies by John Gabriel Mmbando.</span><span><a href="../">Front page</a> · <a href="../portfolio/">Full portfolio</a></span></div></footer>
+
+  <script>
+    (function () {
+      var choices = Array.prototype.slice.call(document.querySelectorAll(".choice"));
+      var feedback = document.getElementById("decisionFeedback");
+      var recordsCount = document.getElementById("recordsCount");
+      var recordStatus = document.getElementById("recordStatus");
+      var supportPanel = document.getElementById("supportPanel");
+      var pendingLabel = document.getElementById("pendingLabel");
+      var pendingText = document.getElementById("pendingText");
+      var documentTrack = document.getElementById("documentTrack");
+      var updateStatus = document.getElementById("updateStatus");
+      var updateStatusText = document.getElementById("updateStatusText");
+      var outcome = document.getElementById("outcome");
+      var outcomeLabel = document.getElementById("outcomeLabel");
+      var outcomeText = document.getElementById("outcomeText");
+      var timelineUpdate = document.getElementById("timelineUpdate");
+      var timelineText = document.getElementById("timelineText");
+      var trackingPrompt = document.getElementById("trackingPrompt");
+      var summaryBestLabel = document.getElementById("summaryBestLabel");
+      var summaryBestAnswer = document.getElementById("summaryBestAnswer");
+      var summaryOtherLabel = document.getElementById("summaryOtherLabel");
+      var summaryOtherAnswer = document.getElementById("summaryOtherAnswer");
+      var managementNote = document.getElementById("managementNote");
+      var reviewQuestions = [
+        { panel: document.getElementById("varianceQuestion"), feedback: document.getElementById("varianceFeedback"), next: document.getElementById("trackingQuestion") },
+        { panel: document.getElementById("trackingQuestion"), feedback: document.getElementById("trackingFeedback"), next: document.getElementById("summaryQuestion") },
+        { panel: document.getElementById("summaryQuestion"), feedback: document.getElementById("summaryFeedback"), next: document.getElementById("finalSummary") }
+      ];
+      var finalSummary = document.getElementById("finalSummary");
+      var selectedChoice = "";
+      var updateTimer = null;
+      var messages = {
+        request: { tone: "good", text: "Good next step: request the missing records and keep the review open. Check the evidence when it arrives; assess the variance separately." },
+        approve: { tone: "caution", text: "Clearing the line now would leave its support unchecked. Keep the review open until the documents are reviewed." },
+        reject: { tone: "caution", text: "A missing record calls for follow-up. It does not prove a problem by itself; review the support before deciding." }
+      };
+
+      function resetQuestionsFrom(startIndex) {
+        reviewQuestions.forEach(function (question, questionIndex) {
+          if (questionIndex < startIndex) return;
+          question.panel.hidden = true;
+          question.feedback.textContent = question.defaultFeedback;
+          question.feedback.setAttribute("data-tone", question.defaultTone);
+          question.next.hidden = true;
+          question.panel.querySelectorAll(".answer-choice").forEach(function (answer) {
+            answer.disabled = false;
+            answer.setAttribute("aria-pressed", "false");
+            answer.querySelector(".answer-marker").textContent = "";
+          });
+        });
+        finalSummary.hidden = true;
+      }
+
+      function clearScenarioResponse() {
+        recordsCount.textContent = "25";
+        recordStatus.textContent = "4 pending";
+        supportPanel.setAttribute("data-updated", "false");
+        pendingLabel.textContent = "Awaiting support";
+        pendingText.innerHTML = "A <strong>TZS 21.2M</strong> expenditure line awaits a supporting schedule and attendance record.";
+        Array.prototype.forEach.call(documentTrack.children, function (segment, index) {
+          segment.classList.toggle("done", index < 25);
+          segment.classList.toggle("pending", index >= 25);
+        });
+        documentTrack.setAttribute("aria-label", "25 of 29 supporting records complete");
+        updateStatus.setAttribute("data-updated", "false");
+        outcome.hidden = true;
+        timelineUpdate.classList.remove("complete");
+        timelineText.textContent = "Not yet shown.";
+      }
+
+      choices.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var nextChoice = button.getAttribute("data-choice");
+          if (selectedChoice === nextChoice) return;
+          if (updateTimer !== null) {
+            window.clearTimeout(updateTimer);
+            updateTimer = null;
+          }
+          selectedChoice = nextChoice;
+          resetQuestionsFrom(0);
+          clearScenarioResponse();
+          choices.forEach(function (choice) {
+            var chosen = choice === button;
+            choice.setAttribute("aria-pressed", chosen ? "true" : "false");
+            choice.querySelector(".choice-marker").textContent = chosen ? "✓" : "";
+          });
+          feedback.textContent = messages[selectedChoice].text;
+          feedback.setAttribute("data-tone", messages[selectedChoice].tone);
+          updateStatusText.textContent = "Choice recorded · simulated update arriving";
+          updateTimer = window.setTimeout(advanceCase, 400);
+        });
+      });
+
+      reviewQuestions.forEach(function (question, questionIndex) {
+        var answers = Array.prototype.slice.call(question.panel.querySelectorAll(".answer-choice"));
+        question.defaultFeedback = question.feedback.textContent;
+        question.defaultTone = question.feedback.getAttribute("data-tone") || "neutral";
+        answers.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var changedAnswer = answers.some(function (answer) {
+              return answer.getAttribute("aria-pressed") === "true" && answer !== button;
+            });
+            if (changedAnswer) {
+              resetQuestionsFrom(questionIndex + 1);
+              updateStatusText.textContent = "Selection changed · continue the review from this step";
+            }
+            answers.forEach(function (answer) {
+              var chosen = answer === button;
+              answer.setAttribute("aria-pressed", chosen ? "true" : "false");
+              answer.querySelector(".answer-marker").textContent = chosen ? "✓" : "";
+            });
+            question.feedback.textContent = button.getAttribute("data-response");
+            question.feedback.setAttribute("data-tone", button.getAttribute("data-tone"));
+            question.next.hidden = false;
+            if (question.next === finalSummary) {
+              updateStatusText.textContent = "Review decisions complete · sample management wording is ready";
+              finalSummary.focus();
+            }
+          });
+        });
+      });
+
+      function advanceCase() {
+        updateTimer = null;
+        if (!selectedChoice) return;
+        var response = {
+          request: {
+            completedRecords: 27,
+            pendingRecords: 2,
+            supportState: "partial",
+            statusTone: "partial",
+            outcomeTone: "partial",
+            status: "Requested records received · 2 remain pending",
+            label: "Two records still pending",
+            timeline: "The schedule and attendance record for the TZS 21.2M line arrived; two other records remain unspecified.",
+            outcome: "The requested schedule and attendance record arrive in this fictional response. Assumption: they are two of the four pending records, moving completeness from 25/29 to 27/29. Two unspecified records remain. Spending is TZS 9.4M below plan and still needs context.",
+            tracking: "Two unspecified records remain pending. Spending is TZS 9.4M below plan; track the remaining documents and the spending difference separately.",
+            summary: "Two records remain pending; spending is TZS 9.4M below plan",
+            summaryFeedback: "This records the two received documents, the two still pending, and the below-plan difference without making a premature conclusion.",
+            summaryOther: "Close because spending is within budget",
+            summaryOtherFeedback: "The remaining budget does not resolve the plan difference or the two pending records. Include both follow-ups.",
+            management: "The schedule and attendance record for the TZS 21.2M line have arrived. Assuming they were two of four pending records, 27 of 29 are complete and two unspecified records remain open. Recorded expenditure is TZS 9.4M (1.9%) below plan; follow up on the remaining records and understand the spending difference."
+          },
+          approve: {
+            completedRecords: 25,
+            pendingRecords: 4,
+            supportState: "false",
+            statusTone: "false",
+            outcomeTone: "caution",
+            status: "No follow-up sent · 4 records remain pending",
+            label: "Line cleared before support review",
+            timeline: "No supporting records were requested; 25/29 are complete and the TZS 21.2M line remains unsupported.",
+            outcome: "You chose to clear the TZS 21.2M line before checking its support. Four records remain pending (25/29). Reopen the follow-up before treating the line as supported. Spending is TZS 9.4M below plan and also needs context.",
+            tracking: "The schedule and attendance record are still missing; two other records are also pending. Spending is TZS 9.4M below plan. Track the documentation and spending difference separately.",
+            summary: "Four records are pending; the TZS 21.2M line still needs support",
+            summaryFeedback: "This reports the incomplete file and avoids treating a below-plan figure as a conclusion.",
+            summaryOther: "Close because spending is within budget",
+            summaryOtherFeedback: "This overlooks four pending records and the TZS 9.4M difference from plan. Keep both follow-ups open.",
+            management: "The TZS 21.2M line was cleared before its supporting schedule and attendance record were reviewed. The file is incomplete (25 of 29 records). Recorded expenditure is TZS 9.4M (1.9%) below plan. Reopen the documentation follow-up and review activity timing before making a determination."
+          },
+          reject: {
+            completedRecords: 25,
+            pendingRecords: 4,
+            supportState: "false",
+            statusTone: "false",
+            outcomeTone: "caution",
+            status: "Evidence gap remains · 4 records pending",
+            label: "Follow-up needed before a final decision",
+            timeline: "The line was rejected with an incomplete file; 25/29 records are available, so reassessment is needed.",
+            outcome: "You chose to reject the TZS 21.2M line because records are missing. In this fictional path, four records remain pending (25/29). Request and assess the support before recording a final outcome; the missing record alone is not a finding. Spending is TZS 9.4M below plan and still needs context.",
+            tracking: "The schedule and attendance record are still missing; two other records are also pending. Spending is TZS 9.4M below plan. Track the documentation and spending difference separately.",
+            summary: "Four records are pending; the TZS 21.2M line still needs support",
+            summaryFeedback: "This reports the incomplete file and avoids treating a below-plan figure as a conclusion.",
+            summaryOther: "Close because spending is within budget",
+            summaryOtherFeedback: "This overlooks four pending records and the TZS 9.4M difference from plan. Keep both follow-ups open.",
+            management: "The TZS 21.2M line was rejected while its supporting schedule and attendance record were missing. The file is incomplete (25 of 29 records). Recorded expenditure is TZS 9.4M (1.9%) below plan. Request and review the support, and understand the spending difference, before recording a final finding."
+          }
+        }[selectedChoice];
+
+        recordsCount.textContent = String(response.completedRecords);
+        recordStatus.textContent = response.pendingRecords + " pending";
+        supportPanel.setAttribute("data-updated", response.supportState);
+        if (response.completedRecords > 25) {
+          pendingLabel.textContent = "2 records still pending";
+          pendingText.innerHTML = "The schedule and attendance record for the <strong>TZS 21.2M</strong> line have arrived. Assuming these are two of four pending records, two unspecified records remain open.";
+        } else {
+          pendingLabel.textContent = selectedChoice === "approve" ? "Support still missing" : "Evidence still needed";
+          pendingText.innerHTML = "A <strong>TZS 21.2M</strong> expenditure line is still awaiting a supporting schedule and attendance record.";
+        }
+        Array.prototype.forEach.call(documentTrack.children, function (segment, index) {
+          segment.classList.toggle("done", index < response.completedRecords);
+          segment.classList.toggle("pending", index >= response.completedRecords);
+        });
+        documentTrack.setAttribute("aria-label", response.completedRecords + " of 29 supporting records complete");
+        updateStatus.setAttribute("data-updated", response.statusTone);
+        updateStatusText.textContent = response.status;
+        outcomeLabel.textContent = response.label;
+        outcome.setAttribute("data-tone", response.outcomeTone);
+        timelineUpdate.classList.add("complete");
+        timelineText.textContent = response.timeline;
+        outcomeText.textContent = response.outcome;
+        trackingPrompt.textContent = response.tracking;
+        summaryBestLabel.textContent = response.summary;
+        summaryBestAnswer.setAttribute("data-response", response.summaryFeedback);
+        summaryOtherLabel.textContent = response.summaryOther;
+        summaryOtherAnswer.setAttribute("data-response", response.summaryOtherFeedback);
+        managementNote.textContent = "“" + response.management + "”";
+        outcome.hidden = false;
+        document.getElementById("varianceQuestion").hidden = false;
+      }
+    }());
+
+    (function () {
+      var actionButtons = Array.prototype.slice.call(document.querySelectorAll("[data-asset-action]"));
+      var evidenceButtons = Array.prototype.slice.call(document.querySelectorAll("[data-asset-evidence]"));
+      var assetUpdate = document.getElementById("assetUpdate");
+      var assetUpdateLabel = document.getElementById("assetUpdateLabel");
+      var assetUpdateText = document.getElementById("assetUpdateText");
+      var assetFollowup = document.getElementById("assetFollowup");
+      var assetEvidenceFeedback = document.getElementById("assetEvidenceFeedback");
+      var assetFinal = document.getElementById("assetFinal");
+      var assetFinalLabel = document.getElementById("assetFinalLabel");
+      var assetFinalText = document.getElementById("assetFinalText");
+      var selectedAssetAction = "";
+      var actionResponses = {
+        separate: {
+          tone: "good",
+          label: "Follow-ups split · 2 exceptions open",
+          text: "Simulated update: Asset 07 is queued for an identifier cross-check; Asset 11 for re-sighting or reviewed custody evidence. No loss classification or register change is recorded."
+        },
+        missing: {
+          tone: "caution",
+          label: "Loss classification held · evidence needed",
+          text: "The case flags that an identifier mismatch does not establish absence. Keep both exceptions open and assess evidence for each item separately."
+        },
+        edit: {
+          tone: "caution",
+          label: "Register change held · trail preserved",
+          text: "The original register entry stays in place. In this fictional workflow, a proposed correction needs corroborating evidence and a documented approval trail."
+        }
+      };
+      var evidenceResponses = {
+        specific: {
+          tone: "good",
+          feedback: "Good approach for this sample: check Asset 07 against a second identifier; for Asset 11, document a re-sighting or review custody evidence. Record who reviewed the evidence and when, then follow the applicable approval process.",
+          label: "Evidence-led follow-up",
+          outcome: "The sample remains at 10 of 12 matched, with both exceptions open until evidence is reviewed. Keep the identifier check and the not-sighted follow-up separate; document any approved register correction."
+        },
+        verbal: {
+          tone: "caution",
+          feedback: "A verbal update may guide the next inquiry, but it does not provide a checkable basis to confirm identity or location. Keep both exceptions open while seeking appropriate evidence.",
+          label: "Do not close on verbal confirmation",
+          outcome: "The sample remains at 10 of 12 matched, with both exceptions open. Record the verbal update as context and continue the item-specific checks."
+        },
+        majority: {
+          tone: "caution",
+          feedback: "The 10 matching records do not resolve the other two. Assess each exception on its own evidence before recording a conclusion.",
+          label: "Do not close by majority count",
+          outcome: "The sample remains at 10 of 12 matched, with both exceptions open. A high overall match count does not clear either item-level issue."
+        }
+      };
+
+      function setPressed(buttons, selectedButton) {
+        buttons.forEach(function (button) {
+          var selected = button === selectedButton;
+          button.setAttribute("aria-pressed", selected ? "true" : "false");
+          button.querySelector(".answer-marker").textContent = selected ? "✓" : "";
+        });
+      }
+
+      actionButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var action = button.getAttribute("data-asset-action");
+          if (selectedAssetAction === action) return;
+          selectedAssetAction = action;
+          setPressed(actionButtons, button);
+          var response = actionResponses[action];
+          assetUpdate.setAttribute("data-tone", response.tone);
+          assetUpdateLabel.textContent = response.label;
+          assetUpdateText.textContent = response.text;
+          assetFollowup.hidden = false;
+          evidenceButtons.forEach(function (evidenceButton) {
+            evidenceButton.setAttribute("aria-pressed", "false");
+            evidenceButton.querySelector(".answer-marker").textContent = "";
+          });
+          assetEvidenceFeedback.textContent = "Choose an evidence approach to see review feedback.";
+          assetEvidenceFeedback.setAttribute("data-tone", "neutral");
+          assetFinal.hidden = true;
+        });
+      });
+
+      evidenceButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var response = evidenceResponses[button.getAttribute("data-asset-evidence")];
+          setPressed(evidenceButtons, button);
+          assetEvidenceFeedback.textContent = response.feedback;
+          assetEvidenceFeedback.setAttribute("data-tone", response.tone);
+          assetFinal.setAttribute("data-tone", response.tone);
+          assetFinalLabel.textContent = response.label;
+          assetFinalText.textContent = response.outcome;
+          assetFinal.hidden = false;
+        });
+      });
+    }());
+
+    (function () {
+      var cases = [
+        {
+          actionSelector: "[data-request-action]",
+          evidenceSelector: "[data-request-evidence]",
+          actionAttribute: "data-request-action",
+          evidenceAttribute: "data-request-evidence",
+          updateId: "requestUpdate",
+          updateLabelId: "requestUpdateLabel",
+          updateTextId: "requestUpdateText",
+          followupId: "requestFollowup",
+          feedbackId: "requestEvidenceFeedback",
+          finalId: "requestFinal",
+          finalLabelId: "requestFinalLabel",
+          finalTextId: "requestFinalText",
+          actionResponses: {
+            query: { tone: "good", label: "Reconciliation requested · review pending", text: "Simulated update: the TZS 2.5M difference is assigned for line-by-line reconciliation. The submitted TZS 42.0M request remains unchanged; no approval or rejection is recorded." },
+            approve: { tone: "caution", label: "Approval held · totals do not agree", text: "The case keeps the request pending. A reasonable-looking total does not explain why it is TZS 2.5M higher than the supplied schedule." },
+            reduce: { tone: "caution", label: "Amount unchanged · confirmation needed", text: "The schedule total alone does not authorize changing the submitted request. Preserve the original figures and seek a documented, authorized revision if needed." }
+          },
+          evidenceResponses: {
+            reconcile: { tone: "good", feedback: "Good check: re-add the line items, identify the source of the TZS 2.5M difference, and reconcile the schedule to the request. Keep any corrected submission and its approval trail together.", label: "Request remains pending", outcome: "The difference is not treated as resolved until the request and schedule agree and the explanation is documented. This simulation records no approval, rejection, or eligibility finding." },
+            summary: { tone: "caution", feedback: "Changing only the summary figure leaves the submitted request and schedule inconsistent. Ask for a reconciled pack and retain the original submission for review.", label: "Reconciliation still open", outcome: "The TZS 2.5M difference remains unexplained. Do not alter or approve the request based on the current pack alone." },
+            verbal: { tone: "caution", feedback: "A verbal explanation may help identify the line to check, but the request still needs a documented reconciliation that can be reviewed.", label: "Documented reconciliation still needed", outcome: "The TZS 2.5M difference remains open until the figures and supporting schedule are reconciled in the review record." }
+          }
+        },
+        {
+          actionSelector: "[data-closeout-action]",
+          evidenceSelector: "[data-closeout-evidence]",
+          actionAttribute: "data-closeout-action",
+          evidenceAttribute: "data-closeout-evidence",
+          updateId: "closeoutUpdate",
+          updateLabelId: "closeoutUpdateLabel",
+          updateTextId: "closeoutUpdateText",
+          followupId: "closeoutFollowup",
+          feedbackId: "closeoutEvidenceFeedback",
+          finalId: "closeoutFinal",
+          finalLabelId: "closeoutFinalLabel",
+          finalTextId: "closeoutFinalText",
+          actionResponses: {
+            reconcile: { tone: "good", label: "Closeout open · TZS 0.5M unexplained", text: "Simulated update: keep the report-to-ledger difference open and document how the TZS 4.5M closing balance is treated under the applicable agreement. The totals alone do not determine the cause." },
+            tieout: { tone: "caution", label: "Closeout not complete · report gap remains", text: "Ledger expenditure plus the closing balance equals approved funds, but the final report is TZS 0.5M higher than ledger expenditure. That difference still needs explanation." },
+            deduct: { tone: "caution", label: "Eligibility conclusion held · evidence needed", text: "The TZS 0.5M difference is not, by itself, evidence of an ineligible cost. Keep the closeout open while the report and ledger are reconciled." }
+          },
+          evidenceResponses: {
+            hold: { tone: "good", feedback: "Supported conclusion: TZS 95.5M plus TZS 4.5M reconciles to TZS 100.0M, while reported expenditure still exceeds the ledger by TZS 0.5M. Trace the difference and document balance treatment before closeout is marked complete.", label: "Closeout remains open", outcome: "The figures do not show why the report and ledger differ or determine eligibility. Keep the TZS 0.5M reconciliation and TZS 4.5M balance disposition documented under the applicable agreement." },
+            spent: { tone: "caution", feedback: "The TZS 4.5M closing balance means the figures do not support saying all approved funds were spent. The report-to-ledger difference also remains open.", label: "Closeout remains open", outcome: "Do not state that all funds were spent. Reconcile the TZS 0.5M difference and establish the documented treatment of the TZS 4.5M balance." },
+            ineligible: { tone: "caution", feedback: "The figures identify a difference, not its cause or eligibility. Review the underlying lines and support before making a conclusion.", label: "No eligibility finding supported", outcome: "Keep the TZS 0.5M difference open for review; the data provided do not establish ineligibility or a breach." }
+          }
+        }
+      ];
+
+      function setPressed(buttons, selectedButton) {
+        buttons.forEach(function (button) {
+          var selected = button === selectedButton;
+          button.setAttribute("aria-pressed", selected ? "true" : "false");
+          button.querySelector(".answer-marker").textContent = selected ? "✓" : "";
+        });
+      }
+
+      function bindCase(config) {
+        var actionButtons = Array.prototype.slice.call(document.querySelectorAll(config.actionSelector));
+        var evidenceButtons = Array.prototype.slice.call(document.querySelectorAll(config.evidenceSelector));
+        var update = document.getElementById(config.updateId);
+        var updateLabel = document.getElementById(config.updateLabelId);
+        var updateText = document.getElementById(config.updateTextId);
+        var followup = document.getElementById(config.followupId);
+        var feedback = document.getElementById(config.feedbackId);
+        var final = document.getElementById(config.finalId);
+        var finalLabel = document.getElementById(config.finalLabelId);
+        var finalText = document.getElementById(config.finalTextId);
+        var defaultFeedback = feedback.textContent;
+        var selectedAction = "";
+
+        actionButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var action = button.getAttribute(config.actionAttribute);
+            if (selectedAction === action) return;
+            selectedAction = action;
+            setPressed(actionButtons, button);
+            var response = config.actionResponses[action];
+            update.setAttribute("data-tone", response.tone);
+            updateLabel.textContent = response.label;
+            updateText.textContent = response.text;
+            followup.hidden = false;
+            evidenceButtons.forEach(function (evidenceButton) {
+              evidenceButton.setAttribute("aria-pressed", "false");
+              evidenceButton.querySelector(".answer-marker").textContent = "";
+            });
+            feedback.textContent = defaultFeedback;
+            feedback.setAttribute("data-tone", "neutral");
+            final.hidden = true;
+          });
+        });
+
+        evidenceButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var response = config.evidenceResponses[button.getAttribute(config.evidenceAttribute)];
+            setPressed(evidenceButtons, button);
+            feedback.textContent = response.feedback;
+            feedback.setAttribute("data-tone", response.tone);
+            final.setAttribute("data-tone", response.tone);
+            finalLabel.textContent = response.label;
+            finalText.textContent = response.outcome;
+            final.hidden = false;
+          });
+        });
+      }
+
+      cases.forEach(bindCase);
+    }());
+  </script>
+</body>
+</html>
+

@@ -3,467 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="John Gabriel Mmbando is a Tanzania-based grants management and finance professional focused on partner accountability, donor compliance, field verification and financial oversight.">
   <meta name="theme-color" content="#102c40">
-  <meta name="description" content="John Gabriel Mmbando is a Tanzania-based grants professional with experience in donor compliance, partner financial monitoring, budget analysis and programme closeout.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="John Gabriel Mmbando | Grants & Finance">
-  <meta property="og:description" content="Grants management, financial analysis, risk and compliance for donor-funded programmes.">
-  <meta property="og:image" content="https://johngabri.github.io/john-mmbando-portfolio/profile.jpg">
-  <title>John Gabriel Mmbando | Grants Management & Finance</title>
+  <title>John Gabriel Mmbando | Grants &amp; Finance</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --ink: #142f40;
-      --ink-soft: #3d5966;
-      --muted: #6f8389;
-      --paper: #f5f6f2;
-      --white: #fff;
-      --line: #dce4df;
-      --teal: #146d68;
-      --teal-dark: #0e5554;
-      --teal-pale: #e6f1ed;
-      --gold: #bf9854;
-      --gold-pale: #f4efe3;
-      --navy: #102c40;
-      --navy-2: #1c4351;
-      --shadow: 0 24px 70px rgba(17, 44, 61, .12);
-      --radius: 18px;
-      --content: 1160px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
-    h1, h2, h3, h4, p { margin-top: 0; }
-    h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; letter-spacing: -.035em; }
-    a { color: inherit; }
-    button { font: inherit; }
-    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 1000; padding: 12px 16px; color: white; background: var(--navy); border-radius: 8px; }
-    .skip-link:focus { top: 12px; }
-    .shell { width: min(var(--content), calc(100% - 48px)); margin: 0 auto; }
-    .site-header { height: 78px; display: flex; align-items: center; position: sticky; z-index: 50; top: 0; background: rgba(245,246,242,.93); border-bottom: 1px solid rgba(220,228,223,.8); backdrop-filter: blur(16px); }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-mark { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 12px; color: white; background: var(--navy); font-family: 'Manrope',sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .04em; }
-    .brand-copy { display: grid; line-height: 1.25; }
-    .brand-copy strong { font: 700 13px 'Manrope', sans-serif; letter-spacing: -.02em; }
-    .brand-copy span { color: var(--muted); font-size: 11px; letter-spacing: .075em; text-transform: uppercase; }
-    .nav { display: flex; align-items: center; gap: 28px; }
-    .nav a { color: var(--ink-soft); font-size: 13px; font-weight: 600; text-decoration: none; transition: color .2s ease; }
-    .nav a:hover, .nav a:focus-visible { color: var(--teal); }
-    .nav .nav-contact { color: white; background: var(--teal); border-radius: 999px; padding: 10px 18px; }
-    .nav .nav-contact:hover { color: white; background: var(--teal-dark); }
-    .menu-toggle { display: none; width: 42px; height: 42px; color: var(--ink); border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
-    .hero { position: relative; overflow: hidden; padding: 84px 0 72px; background: var(--paper); }
-    .hero:before { content: ''; position: absolute; width: 540px; height: 540px; top: -330px; right: -80px; border: 1px solid rgba(20,109,104,.12); border-radius: 50%; box-shadow: 0 0 0 55px rgba(20,109,104,.025), 0 0 0 110px rgba(20,109,104,.02); pointer-events: none; }
-    .hero-grid { display: grid; grid-template-columns: 1.16fr .84fr; align-items: center; gap: 64px; position: relative; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--teal); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow:before { content: ''; width: 23px; height: 1px; background: var(--gold); }
-    .hero h1 { max-width: 690px; margin: 20px 0 16px; font-size: clamp(39px, 5.2vw, 66px); line-height: 1.08; font-weight: 700; }
-    .hero h1 span { color: var(--teal); }
-    .hero-title { max-width: 660px; margin: 0 0 18px; color: var(--ink-soft); font: 600 17px/1.6 'Manrope',sans-serif; }
-    .hero-intro { max-width: 610px; margin-bottom: 28px; color: var(--muted); font-size: 15px; }
-    .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 20px; border: 1px solid transparent; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { color: white; background: var(--teal); }
-    .button-primary:hover { background: var(--teal-dark); }
-    .button-secondary { color: var(--ink); background: transparent; border-color: #cbd7d2; }
-    .button-secondary:hover { border-color: var(--teal); background: white; }
-    .arrow { font-size: 16px; line-height: 1; }
-    .hero-card-wrap { position: relative; padding: 20px 0 0 28px; }
-    .hero-card { position: relative; min-height: 400px; overflow: hidden; padding: 30px; color: white; background: linear-gradient(150deg, #183d50, #102c40 65%, #15444a); border-radius: 24px; box-shadow: var(--shadow); }
-    .hero-card:before, .hero-card:after { content: ''; position: absolute; border: 1px solid rgba(222,194,139,.32); border-radius: 50%; pointer-events: none; }
-    .hero-card:before { width: 310px; height: 310px; top: -108px; right: -100px; }
-    .hero-card:after { width: 235px; height: 235px; top: -70px; right: -62px; border-color: rgba(255,255,255,.12); }
-    .portrait-frame { width: 176px; height: 204px; margin: 12px auto 24px; position: relative; display: grid; place-items: center; overflow: hidden; background: linear-gradient(155deg,rgba(237,228,202,.18),rgba(255,255,255,.06)); border: 1px solid rgba(255,255,255,.26); border-radius: 90px 90px 14px 14px; }
-    .portrait-frame img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
-    .card-name { margin: 7px 0 2px; font: 700 18px 'Manrope',sans-serif; text-align: center; letter-spacing: -.025em; }
-    .card-role { margin: 0; color: rgba(255,255,255,.74); font-size: 12px; text-align: center; }
-    .location-chip { width: fit-content; display: flex; align-items: center; gap: 8px; margin: 21px auto 0; padding: 7px 12px; color: rgba(255,255,255,.82); border: 1px solid rgba(255,255,255,.19); border-radius: 99px; font-size: 11px; }
-    .location-dot { width: 6px; height: 6px; display: block; border-radius: 50%; background: #d8bd83; }
-    .card-tab { position: absolute; left: -2px; bottom: 50px; width: 64px; height: 64px; display: grid; place-items: center; color: var(--navy); background: #d8bd83; border: 7px solid var(--paper); border-radius: 20px; font: 700 15px 'Manrope',sans-serif; transform: rotate(-7deg); }
-    .expertise-band { padding: 0 0 76px; }
-    .expertise-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.58); }
-    .expertise-item { display: flex; align-items: center; gap: 14px; min-height: 88px; padding: 20px 25px; }
-    .expertise-item + .expertise-item { border-left: 1px solid var(--line); }
-    .expertise-icon { width: 38px; height: 38px; display: grid; flex: 0 0 auto; place-items: center; color: var(--teal); background: var(--teal-pale); border-radius: 12px; }
-    .expertise-icon svg { width: 18px; height: 18px; }
-    .expertise-item strong { display: block; font: 700 13px 'Manrope',sans-serif; }
-    .expertise-item span { color: var(--muted); font-size: 11px; }
-    section { position: relative; }
-    .section { padding: 92px 0; }
-    .section-white { background: white; }
-    .section-dark { color: white; background: var(--navy); }
-    .section-heading { max-width: 660px; margin-bottom: 42px; }
-    .section-heading h2 { margin: 14px 0 12px; font-size: clamp(31px,4vw,46px); line-height: 1.15; }
-    .section-heading p { margin: 0; color: var(--muted); font-size: 15px; }
-    .section-dark .section-heading p { color: rgba(255,255,255,.67); }
-    .about-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: 70px; align-items: start; }
-    .about-copy { color: var(--ink-soft); font-size: 15px; }
-    .about-copy p { margin-bottom: 18px; }
-    .pull-quote { margin-top: 26px; padding: 20px 22px; color: var(--ink); background: var(--gold-pale); border-left: 3px solid var(--gold); border-radius: 0 12px 12px 0; font: 600 16px/1.55 'Manrope',sans-serif; }
-    .about-list { display: grid; gap: 14px; }
-    .about-list-item { padding: 19px 20px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcf9; }
-    .about-list-item .label { display: block; margin-bottom: 5px; color: var(--teal); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .about-list-item strong { display: block; font: 700 15px 'Manrope',sans-serif; }
-    .about-list-item span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
-    .experience-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 54px; align-items: start; }
-    .timeline { position: relative; padding-left: 30px; border-left: 1px solid #cddad4; }
-    .timeline-entry { position: relative; padding: 0 0 36px 17px; }
-    .timeline-entry:last-child { padding-bottom: 0; }
-    .timeline-entry:before { content: ''; position: absolute; width: 11px; height: 11px; left: -36px; top: 5px; border: 3px solid white; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
-    .timeline-date { margin-bottom: 7px; color: var(--teal); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-    .timeline-entry h3 { margin: 0 0 4px; font-size: 19px; }
-    .timeline-employer { margin-bottom: 14px; color: var(--muted); font-size: 13px; }
-    .timeline-entry p { color: var(--ink-soft); font-size: 14px; }
-    .task-list { display: grid; gap: 9px; padding: 0; margin: 16px 0 0; list-style: none; }
-    .task-list li { display: flex; gap: 10px; color: var(--ink-soft); font-size: 13px; }
-    .task-list li:before { content: '•'; color: var(--gold); font-size: 18px; line-height: 1; }
-    .career-card { padding: 28px; color: white; background: var(--navy); border-radius: 17px; }
-    .career-card h3 { margin: 0 0 9px; font-size: 19px; }
-    .career-card p { margin: 0 0 19px; color: rgba(255,255,255,.65); font-size: 13px; }
-    .career-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .career-tags span { padding: 7px 10px; color: #e8ece5; border: 1px solid rgba(255,255,255,.18); border-radius: 99px; font-size: 10px; }
-    .note-box { margin-top: 19px; padding: 15px 16px; color: var(--ink-soft); background: var(--gold-pale); border-radius: 12px; font-size: 12px; }
-    .note-box strong { color: var(--ink); }
-    .assignment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .assignment-card { min-height: 248px; padding: 26px; position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: #fbfcf9; transition: transform .25s ease, box-shadow .25s ease; }
-    .assignment-card:hover { transform: translateY(-4px); box-shadow: 0 18px 34px rgba(17,44,61,.07); }
-    .assignment-index { color: var(--gold); font: 700 12px 'Manrope',sans-serif; letter-spacing: .08em; }
-    .assignment-card h3 { margin: 13px 0 9px; font-size: 20px; }
-    .assignment-card p { margin: 0; color: var(--muted); font-size: 13px; }
-    .assignment-label { display: inline-block; margin-top: 18px; padding: 6px 9px; color: var(--teal-dark); background: var(--teal-pale); border-radius: 99px; font-size: 10px; font-weight: 700; }
-    .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
-    .skill-card { padding: 22px 19px 20px; color: var(--ink); background: white; border-radius: 14px; }
-    .skill-card .skill-num { color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
-    .skill-card h3 { margin: 10px 0 13px; font-size: 15px; }
-    .skill-card ul { padding: 0; margin: 0; list-style: none; }
-    .skill-card li { padding: 7px 0; color: var(--ink-soft); border-top: 1px solid #edf0ec; font-size: 11px; line-height: 1.45; }
-    .skills-caption { margin: 24px 0 0; color: rgba(255,255,255,.58); font-size: 11px; }
-    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .education-card { display: flex; gap: 18px; padding: 25px; border: 1px solid var(--line); border-radius: 15px; }
-    .education-icon { width: 44px; height: 44px; display: grid; flex: 0 0 auto; place-items: center; color: var(--teal); background: var(--teal-pale); border-radius: 14px; font: 700 13px 'Manrope',sans-serif; }
-    .education-card h3 { margin: 1px 0 5px; font-size: 16px; }
-    .education-card p { margin: 0; color: var(--muted); font-size: 12px; }
-    .status { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; color: var(--teal); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-    .status:before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-    .analysis-intro { max-width: 650px; margin: -16px 0 30px; color: rgba(255,255,255,.67); font-size: 14px; }
-    .analysis-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
-    .analysis-card { padding: 21px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: rgba(255,255,255,.045); }
-    .analysis-card h3 { margin: 0 0 8px; font-size: 15px; }
-    .analysis-card p { margin: 0; color: rgba(255,255,255,.59); font-size: 12px; }
-    .development-flag { display: inline-block; margin-top: 14px; padding: 5px 8px; color: #ebd6a8; background: rgba(191,152,84,.14); border-radius: 99px; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    .interests-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
-    .interest { min-height: 114px; display: flex; align-items: flex-end; padding: 18px; position: relative; overflow: hidden; color: white; background: var(--navy-2); border-radius: 14px; }
-    .interest:nth-child(2n) { background: var(--teal-dark); }
-    .interest:before { content: ''; position: absolute; width: 100px; height: 100px; top: -42px; right: -28px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 16px rgba(255,255,255,.035); }
-    .interest span { position: relative; max-width: 170px; font: 600 13px/1.35 'Manrope',sans-serif; }
-    .documents-row { display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: center; padding: 30px; border: 1px solid var(--line); border-radius: 16px; background: #fbfcf9; }
-    .documents-row h3 { margin: 0 0 7px; font-size: 19px; }
-    .documents-row p { margin: 0; color: var(--muted); font-size: 13px; }
-    .contact { padding: 82px 0; color: white; background: linear-gradient(120deg, #0d2b40, #16434a); }
-    .contact-grid { display: grid; grid-template-columns: 1fr .68fr; gap: 60px; align-items: center; }
-    .contact h2 { max-width: 580px; margin: 14px 0; font-size: clamp(34px,4vw,48px); line-height: 1.12; }
-    .contact-copy { max-width: 530px; color: rgba(255,255,255,.68); font-size: 14px; }
-    .contact-panel { padding: 25px; border: 1px solid rgba(255,255,255,.18); border-radius: 16px; background: rgba(255,255,255,.05); }
-    .contact-detail { display: flex; align-items: flex-start; gap: 12px; padding: 13px 0; }
-    .contact-detail + .contact-detail { border-top: 1px solid rgba(255,255,255,.13); }
-    .contact-detail svg { width: 18px; height: 18px; flex: 0 0 auto; margin-top: 3px; color: #e0c994; }
-    .contact-detail span { display: block; color: rgba(255,255,255,.55); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
-    .contact-detail a, .contact-detail strong { display: inline-block; color: white; font-size: 13px; font-weight: 600; text-decoration: none; }
-    .contact-detail a:hover { text-decoration: underline; }
-    .contact-note { margin: 13px 0 0; color: rgba(255,255,255,.52); font-size: 10px; }
-    .site-footer { padding: 23px 0; color: var(--muted); background: #0b2536; font-size: 11px; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .footer-inner a { color: rgba(255,255,255,.74); text-decoration: none; }
-    .footer-inner a:hover { color: white; }
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    :focus-visible { outline: 3px solid #d1af70; outline-offset: 3px; }
-    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
-    @media (max-width: 920px) {
-      .nav { gap: 17px; }
-      .nav a { font-size: 12px; }
-      .hero-grid { gap: 36px; }
-      .hero-card-wrap { padding-left: 12px; }
-      .about-grid, .experience-layout { gap: 36px; }
-      .skills-grid { grid-template-columns: repeat(2,1fr); }
-      .interests-grid { grid-template-columns: repeat(2,1fr); }
-    }
-    @media (max-width: 720px) {
-      .shell { width: min(var(--content), calc(100% - 36px)); }
-      .site-header { height: 68px; }
-      .menu-toggle { display: grid; place-items: center; }
-      .nav { display: none; position: absolute; top: 67px; left: 0; right: 0; align-items: stretch; gap: 0; padding: 12px 18px 18px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px rgba(17,44,61,.08); }
-      .nav.open { display: grid; }
-      .nav a { padding: 12px 8px; font-size: 14px; }
-      .nav .nav-contact { width: fit-content; padding: 10px 16px; margin-top: 5px; }
-      .hero { padding: 58px 0 50px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
-      .hero h1 { font-size: clamp(40px,11vw,57px); }
-      .hero-title { font-size: 15px; }
-      .hero-card-wrap { width: min(390px,100%); justify-self: center; padding-left: 15px; }
-      .hero-card { min-height: 365px; }
-      .portrait-frame { width: 150px; height: 172px; margin-top: 2px; }
-      .expertise-band { padding-bottom: 52px; }
-      .expertise-grid { grid-template-columns: 1fr; }
-      .expertise-item { min-height: 72px; padding: 15px 18px; }
-      .expertise-item + .expertise-item { border-left: 0; border-top: 1px solid var(--line); }
-      .section { padding: 68px 0; }
-      .section-heading { margin-bottom: 30px; }
-      .about-grid, .experience-layout { grid-template-columns: 1fr; gap: 32px; }
-      .assignment-grid, .education-grid { grid-template-columns: 1fr; }
-      .assignment-card { min-height: unset; }
-      .analysis-grid { grid-template-columns: 1fr; }
-      .analysis-card { padding: 18px; }
-      .documents-row { grid-template-columns: 1fr; padding: 23px; }
-      .contact { padding: 66px 0; }
-      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-    @media (max-width: 420px) {
-      .shell { width: calc(100% - 30px); }
-      .brand-copy strong { font-size: 12px; }
-      .brand-copy span { font-size: 9px; }
-      .button-row { align-items: stretch; flex-direction: column; }
-      .button { width: 100%; }
-      .skills-grid, .interests-grid { grid-template-columns: 1fr; }
-      .skill-card { padding: 19px; }
-    }
+    :root { --ink:#142f40; --ink-soft:#3d5966; --muted:#6f8389; --paper:#f5f6f2; --white:#fff; --line:#dce4df; --teal:#146d68; --teal-dark:#0e5554; --teal-pale:#e6f1ed; --gold:#bf9854; --gold-pale:#f4efe3; --navy:#102c40; --shadow:0 18px 48px rgba(17,44,61,.09); --radius:18px; --content:1160px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:92px; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { font-family:'Manrope',sans-serif; letter-spacing:-.035em; }
+    a { color:inherit; }
+    .wrap { width:min(var(--content),calc(100% - 48px)); margin:0 auto; }
+    .skip-link { position:absolute; left:16px; top:-60px; z-index:100; padding:10px 14px; color:#fff; background:var(--navy); border-radius:8px; }
+    .skip-link:focus { top:12px; }
+    .site-header { position:sticky; top:0; z-index:20; border-bottom:1px solid rgba(220,228,223,.85); background:rgba(245,246,242,.94); backdrop-filter:blur(14px); }
+    .header-inner { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:11px; text-decoration:none; }
+    .brand-mark { width:40px; height:40px; display:grid; place-items:center; color:#fff; background:var(--navy); border-radius:12px; font:800 13px 'Manrope',sans-serif; }
+    .brand-copy { display:grid; line-height:1.2; }
+    .brand-copy strong { font:700 13px 'Manrope',sans-serif; }
+    .brand-copy small { margin-top:4px; color:var(--muted); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+    .nav { display:flex; align-items:center; gap:12px; }
+    .nav a { padding:9px 13px; color:var(--ink-soft); border-radius:999px; font-size:12px; font-weight:700; text-decoration:none; }
+    .nav a:hover,.nav a:focus-visible { color:var(--teal-dark); background:var(--teal-pale); }
+    .nav .nav-cta { color:#fff; background:var(--teal); }
+    .nav .nav-cta:hover { color:#fff; background:var(--teal-dark); }
+    .hero { padding:68px 0 52px; background:radial-gradient(circle at 83% 10%,rgba(20,109,104,.08),transparent 30%),var(--paper); }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); align-items:center; gap:clamp(34px,6vw,78px); }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--teal); font-size:11px; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+    .eyebrow::before { width:24px; height:1px; background:var(--gold); content:''; }
+    h1 { max-width:700px; margin:18px 0 12px; font-size:clamp(42px,6.2vw,70px); line-height:1.03; }
+    h1 span { color:var(--teal); }
+    .role { margin:0 0 15px; color:var(--ink-soft); font:700 clamp(15px,2vw,19px)/1.5 'Manrope',sans-serif; }
+    .intro { max-width:660px; margin:0 0 25px; color:var(--muted); font-size:15px; }
+    .actions { display:flex; flex-wrap:wrap; gap:11px; }
+    .button { min-height:47px; display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:0 18px; border:1px solid transparent; border-radius:999px; font-size:12px; font-weight:800; text-decoration:none; transition:transform .2s ease,background .2s ease,border-color .2s ease; }
+    .button:hover { transform:translateY(-2px); }
+    .button-primary { color:#fff; background:var(--teal); }
+    .button-primary:hover { background:var(--teal-dark); }
+    .button-secondary { color:var(--ink); border-color:#cbd7d2; background:transparent; }
+    .button-secondary:hover { border-color:var(--teal); background:#fff; }
+    .profile-card { position:relative; overflow:hidden; padding:28px; color:#fff; background:linear-gradient(145deg,#183d50,var(--navy) 68%,#15444a); border-radius:22px; box-shadow:var(--shadow); }
+    .profile-card::before { position:absolute; width:290px; height:290px; top:-170px; right:-100px; border:1px solid rgba(255,255,255,.18); border-radius:50%; box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02); content:''; }
+    .portrait { position:relative; width:120px; height:135px; display:block; margin:0 auto 17px; object-fit:cover; object-position:center 25%; border:1px solid rgba(255,255,255,.3); border-radius:65px 65px 12px 12px; }
+    .profile-name { margin:0 0 4px; font:700 16px 'Manrope',sans-serif; text-align:center; }
+    .profile-role { margin:0; color:rgba(255,255,255,.72); font-size:12px; text-align:center; }
+    .profile-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:7px; margin-top:18px; }
+    .profile-tags span { padding:6px 9px; color:rgba(255,255,255,.87); border:1px solid rgba(255,255,255,.19); border-radius:99px; font-size:10px; }
+    .highlights { padding:0 0 64px; }
+    .highlight-panel { padding:23px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.68); }
+    .section-label { margin:0 0 14px; color:var(--teal); font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .stat { padding:10px 19px; }
+    .stat + .stat { border-left:1px solid var(--line); }
+    .stat strong { display:block; margin-bottom:5px; color:var(--navy); font:800 clamp(22px,3vw,32px)/1.15 'Manrope',sans-serif; letter-spacing:-.04em; }
+    .stat span { display:block; color:var(--muted); font-size:11px; line-height:1.5; }
+    .paths { padding:72px 0 82px; background:#fff; }
+    .section-heading { max-width:720px; margin-bottom:28px; }
+    h2 { margin:12px 0 9px; font-size:clamp(27px,4vw,38px); line-height:1.17; }
+    .section-intro { margin:0; color:var(--muted); font-size:14px; }
+    .path-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .path-card { min-height:184px; display:flex; flex-direction:column; align-items:flex-start; padding:22px; border:1px solid var(--line); border-radius:15px; background:#fbfcf9; text-decoration:none; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+    .path-card:hover { transform:translateY(-3px); border-color:var(--teal); box-shadow:0 12px 25px rgba(17,44,61,.07); }
+    .path-card:focus-visible,.button:focus-visible,.nav a:focus-visible,.brand:focus-visible { outline:3px solid #c79537; outline-offset:3px; }
+    .path-index { margin-bottom:11px; color:var(--gold); font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .path-card h3 { margin:0 0 7px; font-size:17px; }
+    .path-card p { margin:0 0 15px; color:var(--muted); font-size:12px; }
+    .path-action { margin-top:auto; color:var(--teal-dark); font-size:11px; font-weight:800; }
+    .path-card-portfolio { grid-column:1/-1; min-height:150px; flex-direction:row; align-items:center; justify-content:space-between; gap:22px; color:#fff; border-color:var(--navy); background:var(--navy); }
+    .path-card-portfolio:hover { border-color:var(--teal); background:#143a4b; }
+    .path-card-portfolio .path-index,.path-card-portfolio .path-action { color:#e2c98f; }
+    .path-card-portfolio h3 { font-size:20px; }
+    .path-card-portfolio p { max-width:660px; margin-bottom:0; color:rgba(255,255,255,.71); }
+    .path-card-portfolio .path-action { flex:0 0 auto; }
+    .data-note { margin:17px 0 0; padding:12px 14px; color:var(--ink-soft); border-left:3px solid var(--gold); border-radius:0 10px 10px 0; background:var(--gold-pale); font-size:11px; }
+    .site-footer { padding:19px 0; color:rgba(255,255,255,.7); background:#0b2536; font-size:11px; }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:15px; }
+    .footer-links a { color:#fff; text-decoration:none; }
+    .footer-links a:hover { text-decoration:underline; text-underline-offset:3px; }
+    :focus-visible { outline:3px solid #c79537; outline-offset:3px; }
+    @media(max-width:850px) { .stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .stat:nth-child(3) { border-left:0; border-top:1px solid var(--line); } .stat:nth-child(4) { border-top:1px solid var(--line); } }
+    @media(max-width:700px) { .wrap { width:min(100% - 32px,560px); } .header-inner { min-height:68px; gap:10px; } .brand-copy strong { font-size:11px; } .brand-copy small { font-size:9px; } .nav { gap:2px; } .nav a { padding:8px 9px; font-size:10px; } .nav a:nth-child(n+3) { display:none; } .hero { padding:44px 0 35px; } .hero-grid { grid-template-columns:1fr; gap:28px; } .profile-card { max-width:460px; } .highlights { padding-bottom:46px; } .highlight-panel { padding:18px 14px; } .stat { padding:11px 9px; } .stat span { font-size:10px; } .paths { padding:52px 0 58px; } .path-grid { grid-template-columns:1fr; } .path-card-portfolio { grid-column:auto; min-height:170px; align-items:flex-start; flex-direction:column; gap:13px; } .footer-inner { align-items:flex-start; flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; } }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "John Gabriel Mmbando",
-    "jobTitle": "Regional Grants Officer",
-    "worksFor": { "@type": "Organization", "name": "Deloitte Consulting Limited" },
-    "email": "johnmmbando24@gmail.com",
-    "address": { "@type": "PostalAddress", "addressCountry": "Tanzania" },
-    "description": "Grants management, financial analysis, risk and compliance professional supporting donor-funded programmes."
-  }
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="John Gabriel Mmbando home">
-        <span class="brand-mark" aria-hidden="true">JM</span>
-        <span class="brand-copy"><strong>John Gabriel Mmbando</strong><span>Grants &amp; Finance</span></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-      <nav class="nav" id="primary-nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#experience">Experience</a><a href="#expertise">Skills</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact</a>
-      </nav>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="John Gabriel Mmbando front page"><span class="brand-mark" aria-hidden="true">JM</span><span class="brand-copy"><strong>John Gabriel Mmbando</strong><small>Grants &amp; Finance</small></span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="portfolio/">Full portfolio</a><a href="#case-pathways">Case studies</a><a class="nav-cta" href="mailto:johnmmbando24@gmail.com?subject=Professional%20inquiry%20%E2%80%94%20John%20Gabriel%20Mmbando">Contact</a></nav>
     </div>
   </header>
   <main id="main">
-    <section class="hero" id="top">
-      <div class="shell hero-grid">
-        <div class="reveal">
-          <span class="eyebrow">Tanzania · Finance &amp; Accountability</span>
-          <h1>John Gabriel<br><span>Mmbando</span></h1>
-          <p class="hero-title">Grants Management&nbsp; | &nbsp;Financial Analysis&nbsp; | &nbsp;Risk &amp; Compliance&nbsp; | &nbsp;Donor-Funded Programmes</p>
-          <p class="hero-intro">I support donor-funded programmes through partner accountability, financial monitoring, donor compliance and clear analysis. My experience includes reviewing TZS 2.5 billion+ in partner accountabilities, completing 45+ field visits and strengthening closeout controls.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="#experience">View My Professional Experience <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="#contact">Contact Me <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Tanzania · Grants management &amp; finance</span>
+          <h1 id="intro-title">John Gabriel<br><span>Mmbando</span></h1>
+          <p class="role">Partner accountability · Donor compliance · Financial oversight</p>
+          <p class="intro">I help programme teams turn financial records and field evidence into clear, accountable action. My experience spans partner financial accountability, budget monitoring, verification, risk and controls, and programme closeout.</p>
+          <div class="actions"><a class="button button-primary" href="portfolio/">View my professional portfolio <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#case-pathways">Explore the case studies <span aria-hidden="true">↓</span></a></div>
         </div>
-        <div class="hero-card-wrap reveal" aria-label="Profile summary">
-          <div class="hero-card">
-            <div class="portrait-frame"><img src="profile.jpg" alt="Professional portrait of John Gabriel Mmbando" decoding="async"></div>
-            <p class="card-name">John Gabriel Mmbando</p>
-            <p class="card-role">Regional Grants Officer</p>
-            <div class="location-chip"><span class="location-dot" aria-hidden="true"></span> Tanzania</div>
-          </div>
-          <span class="card-tab" aria-hidden="true">JM</span>
+        <aside class="profile-card" aria-label="Professional profile summary">
+          <img class="portrait" src="profile.jpg" alt="Professional portrait of John Gabriel Mmbando" decoding="async">
+          <p class="profile-name">John Gabriel Mmbando</p>
+          <p class="profile-role">Grants management and finance professional</p>
+          <div class="profile-tags"><span>Donor-funded programmes</span><span>Risk &amp; controls</span><span>Programme closeout</span></div>
+        </aside>
+      </div>
+    </section>
+    <section class="highlights" aria-labelledby="highlights-title">
+      <div class="wrap highlight-panel">
+        <h2 class="section-label" id="highlights-title">Verified career highlights</h2>
+        <div class="stats">
+          <div class="stat"><strong>TZS 2.5bn+</strong><span>Partner accountabilities reviewed</span></div>
+          <div class="stat"><strong>45+</strong><span>Field monitoring and verification visits completed</span></div>
+          <div class="stat"><strong>500+</strong><span>Assets verified across 101 health facilities in two weeks</span></div>
+          <div class="stat"><strong>150+</strong><span>Funding requests reviewed; contributed to a 25% reduction in submission errors</span></div>
         </div>
       </div>
     </section>
-
-    <div class="expertise-band" id="expertise">
-      <div class="shell expertise-grid reveal">
-        <div class="expertise-item"><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5.8A1.8 1.8 0 0 1 5.8 4H20v16H5.8A1.8 1.8 0 0 1 4 18.2"/><path d="M4 16h16M8 8h8M8 11h5"/></svg></span><div><strong>Grants management</strong><span>Funding review &amp; accountability</span></div></div>
-        <div class="expertise-item"><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 6-7"/><path d="M16 6h4v4"/></svg></span><div><strong>Financial analysis</strong><span>Budgets, burn rates &amp; forecasts</span></div></div>
-        <div class="expertise-item"><span class="expertise-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.1c0 4.6 3.2 7.8 7.5 9.9 4.3-2.1 7.5-5.3 7.5-9.9V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><strong>Risk &amp; compliance</strong><span>Controls, evidence &amp; follow-up</span></div></div>
-      </div>
-    </div>
-
-    <section class="section section-white" id="about">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">01 · About me</span><h2>Stewardship built on detail, analysis and trust.</h2><p>A finance professional focused on making programme resources clear, accountable and useful for decision-making.</p></div>
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <p>I am a grants management and donor compliance professional based in Dar es Salaam, Tanzania. I currently support the Afya Yangu Southern Program as a Regional Grants Officer with Deloitte Consulting Limited, bringing experience in partner accountability, financial monitoring, USAID compliance and programme closeout.</p>
-            <p>My work is grounded in careful review of budgets, funding requests and supporting documents. I have reviewed TZS 2.5 billion+ in partner accountabilities, completed 45+ field monitoring visits and supported training for more than 20 staff and implementing partners.</p>
-            <p>I hold a Bachelor of Accounting with Information Technology from the Institute of Finance Management, completed in June 2024. I am at the final level of NBAA Certified Public Accountant studies; the qualification is not yet completed.</p>
-            <div class="pull-quote">“Good financial oversight gives teams the clarity to act and the evidence to be accountable.”</div>
-          </div>
-          <div class="about-list reveal">
-            <div class="about-list-item"><span class="label">Current role</span><strong>Regional Grants Officer</strong><span>Deloitte Consulting Limited · USAID Afya Yangu Southern Program</span></div>
-            <div class="about-list-item"><span class="label">Academic foundation</span><strong>Bachelor of Accounting with Information Technology</strong><span>Institute of Finance Management · June 2024</span></div>
-            <div class="about-list-item"><span class="label">Professional qualification</span><strong>NBAA Certified Public Accountant</strong><span>Final level · not yet completed</span></div>
-            <div class="about-list-item"><span class="label">Working style</span><strong>Analytical · accountable · collaborative</strong><span>Focused on evidence, controls and continuous learning</span></div>
-          </div>
+    <section class="paths" id="case-pathways" aria-labelledby="paths-title">
+      <div class="wrap">
+        <div class="section-heading"><span class="eyebrow">Independent pathways</span><h2 id="paths-title">Choose what you want to explore.</h2><p class="section-intro">Start with my full professional record, or open any case study on its own.</p></div>
+        <div class="path-grid">
+          <a class="path-card path-card-portfolio" href="portfolio/"><div><span class="path-index">Professional profile</span><h3>Explore the full portfolio</h3><p>Experience, verified achievements, capabilities, education, professional development, and contact details.</p></div><span class="path-action">Open portfolio ↗</span></a>
+          <a class="path-card" href="case-studies/index.html#grantpulse-case"><span class="path-index">Case 01 · Accountability</span><h3>GrantPulse</h3><p>Review a budget variance and supporting-record gap, then choose a documented follow-up.</p><span class="path-action">Open GrantPulse ↗</span></a>
+          <a class="path-card" href="case-studies/index.html#asset-case"><span class="path-index">Case 02 · Field verification</span><h3>FieldProof</h3><p>Separate two asset exceptions and select evidence-led verification steps.</p><span class="path-action">Open FieldProof ↗</span></a>
+          <a class="path-card" href="case-studies/index.html#request-case"><span class="path-index">Case 03 · Request review</span><h3>RequestReady</h3><p>Reconcile a funding request with its line-item schedule before recommending action.</p><span class="path-action">Open RequestReady ↗</span></a>
+          <a class="path-card" href="case-studies/index.html#closeout-case"><span class="path-index">Case 04 · Financial closeout</span><h3>Closeout Compass</h3><p>Compare a final report, ledger and closing balance to locate what needs follow-up.</p><span class="path-action">Open Closeout Compass ↗</span></a>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">02 · Professional experience</span><h2>Turning financial information into responsible action.</h2><p>Experience supporting partner financial accountability, programme monitoring and donor compliance.</p></div>
-        <div class="experience-layout">
-          <div class="timeline reveal">
-            <article class="timeline-entry">
-              <div class="timeline-date">June 2025 – Present</div>
-              <h3>Regional Grants Officer</h3>
-              <div class="timeline-employer">Deloitte Consulting Limited · Afya Yangu Southern Program · Dar es Salaam</div>
-              <p>Support financial oversight, partner accountability, donor compliance and closeout activities across a donor-funded health programme.</p>
-              <ul class="task-list">
-                <li>Managed and reviewed TZS 2.5 billion+ in sub-grantee financial accountability and partner payment documentation.</li>
-                <li>Completed 45+ field monitoring and verification visits, reviewing financial records, supporting documents and implementation progress.</li>
-                <li>Supported training for 20+ staff and implementing partners on grants management, budgeting, reporting and compliance.</li>
-                <li>Led verification of 500+ assets across 101 health facilities within two weeks and maintained the Lindi regional asset register.</li>
-                <li>Coordinated closeout and asset distribution; confirmed pending facility staff payments were processed with zero payment-related complaints.</li>
-              </ul>
-            </article>
-            <article class="timeline-entry">
-              <div class="timeline-date">February 2025 – May 2025</div>
-              <h3>Grants, Risk and Compliance Officer</h3>
-              <div class="timeline-employer">Deloitte Consulting Limited · Afya Yangu Southern Program · Dar es Salaam</div>
-              <ul class="task-list">
-                <li>Reviewed and verified 150+ partner funding requests, contributing to a 25% reduction in submission errors.</li>
-                <li>Reviewed partner financial records and supporting documentation for donor compliance and audit readiness.</li>
-                <li>Supported internal audits, risk assessments and follow-up actions to strengthen financial and operational controls.</li>
-              </ul>
-            </article>
-            <article class="timeline-entry">
-              <div class="timeline-date">July 2024 – January 2025</div>
-              <h3>Assistant Accountant · Finance Operations</h3>
-              <div class="timeline-employer">Dhillon Business Solutions · Dar es Salaam</div>
-              <ul class="task-list">
-                <li>Maintained accounting records covering TZS 10 million+ in monthly transactions.</li>
-                <li>Performed month-end reconciliations across 150+ ledger accounts and supported timely financial close.</li>
-                <li>Prepared financial reports, reviewed payment support, and assisted with payroll, cash-flow monitoring and expense projections.</li>
-              </ul>
-            </article>
-          </div>
-          <aside class="career-card reveal">
-            <h3>How I support programme teams</h3>
-            <p>My work brings together finance, compliance and coordination to protect resources and support clear decisions.</p>
-            <div class="career-tags"><span>Partner accountability</span><span>Budget monitoring</span><span>Documentation</span><span>Internal controls</span><span>Field follow-up</span><span>Closeout support</span></div>
-            <div class="note-box"><strong>Selected contributions.</strong> 45+ field visits · 500+ assets verified across 101 facilities · 150+ funding requests reviewed.</div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="projects">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">03 · Selected achievements</span><h2>Practical contributions to accountable funding.</h2><p>Selected achievements across grants management, partner financial monitoring, compliance and programme closeout.</p></div>
-        <div class="assignment-grid">
-          <article class="assignment-card reveal"><span class="assignment-index">SELECTED RESULT 01</span><h3>Partner financial accountability</h3><p>Managed and reviewed TZS 2.5 billion+ in sub-grantee financial accountability, including funding requests, payment documents, budgets and supporting evidence.</p><span class="assignment-label">Donor compliance</span></article>
-          <article class="assignment-card reveal"><span class="assignment-index">SELECTED RESULT 02</span><h3>Field monitoring &amp; verification</h3><p>Completed 45+ monitoring visits across programme regions to review partner documentation, financial accountability, compliance and implementation progress.</p><span class="assignment-label">Monitoring &amp; controls</span></article>
-          <article class="assignment-card reveal"><span class="assignment-index">SELECTED RESULT 03</span><h3>Asset verification &amp; closeout</h3><p>Led physical verification of 500+ assets across 101 health facilities within two weeks and coordinated closeout distribution records.</p><span class="assignment-label">Programme closeout</span></article>
-          <article class="assignment-card reveal"><span class="assignment-index">SELECTED RESULT 04</span><h3>Funding request quality</h3><p>Reviewed 150+ partner funding requests and contributed to a 25% reduction in submission errors through documentation and compliance review.</p><span class="assignment-label">Partner support</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="skills">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">04 · Technical &amp; professional skills</span><h2>Capabilities for reliable financial oversight.</h2><p>Practical strengths across grants administration, analysis, risk and reporting.</p></div>
-        <div class="skills-grid">
-          <article class="skill-card reveal"><span class="skill-num">01 / GRANTS</span><h3>Grants management</h3><ul><li>Sub-award and grant administration</li><li>Partner funding request review</li><li>Financial accountability</li><li>Donor compliance monitoring</li><li>Partner capacity building</li><li>Grant closeout support</li></ul></article>
-          <article class="skill-card reveal"><span class="skill-num">02 / FINANCE</span><h3>Financial management &amp; analysis</h3><ul><li>Budget monitoring</li><li>Budget-versus-actual analysis</li><li>Variance and burn-rate analysis</li><li>Expenditure tracking</li><li>Financial projections</li><li>Payment and document review</li></ul></article>
-          <article class="skill-card reveal"><span class="skill-num">03 / CONTROLS</span><h3>Risk, compliance &amp; audit</h3><ul><li>Risk identification and assessment</li><li>Internal control monitoring</li><li>Compliance reviews</li><li>Audit readiness</li><li>Supporting-document verification</li><li>Corrective-action follow-up</li></ul></article>
-          <article class="skill-card reveal"><span class="skill-num">04 / TOOLS</span><h3>Data &amp; technology</h3><ul><li>Microsoft Excel</li><li>Financial and grants reporting</li><li>Data-informed review</li><li>Power BI and dashboards — developing</li><li>Financial modelling — developing</li></ul></article>
-        </div>
-        <p class="skills-caption">Tool and proficiency descriptions are intentionally conservative. Additional platforms and certificates can be added when confirmed.</p>
-      </div>
-    </section>
-
-    <section class="section section-white" id="education">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">05 · Education &amp; qualifications</span><h2>Accounting education and CPA study at final level.</h2><p>Academic and professional details at their verified status.</p></div>
-        <div class="education-grid">
-          <article class="education-card reveal"><span class="education-icon" aria-hidden="true">IFM</span><div><h3>Bachelor of Accounting with Information Technology</h3><p>Institute of Finance Management (IFM) · Dar es Salaam · June 2024</p><span class="status">Completed</span></div></article>
-          <article class="education-card reveal"><span class="education-icon" aria-hidden="true">CPA</span><div><h3>Certified Public Accountant (CPA)</h3><p>National Board of Accountants and Auditors (NBAA) · Tanzania</p><span class="status">Final level · not yet completed</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="analysis">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">06 · Financial analysis portfolio</span><h2>Building an independent body of analytical work.</h2></div>
-        <p class="analysis-intro reveal">Future samples will use synthetic or public data only. No confidential employer, partner, donor or beneficiary information will be published.</p>
-        <div class="analysis-grid">
-          <article class="analysis-card reveal"><h3>Budget performance dashboard</h3><p>Budget-versus-actual analysis with variance explanations and expenditure trends.</p><span class="development-flag">Planned · synthetic data</span></article>
-          <article class="analysis-card reveal"><h3>Cash-flow forecast</h3><p>A transparent forecast model showing assumptions, timing and sensitivity scenarios.</p><span class="development-flag">Planned · synthetic data</span></article>
-          <article class="analysis-card reveal"><h3>Public company analysis</h3><p>A structured review of published financial statements and selected performance indicators.</p><span class="development-flag">Planned · public data</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="interests">
-      <div class="shell">
-        <div class="section-heading reveal"><span class="eyebrow">07 · Career interests</span><h2>Growing from financial stewardship to strategic insight.</h2><p>Areas of practice and professional development that complement my current experience.</p></div>
-        <div class="interests-grid">
-          <div class="interest reveal"><span>Grants &amp; financial management</span></div><div class="interest reveal"><span>Donor-funded programme accountability</span></div><div class="interest reveal"><span>Financial analysis &amp; forecasting</span></div><div class="interest reveal"><span>Risk, controls &amp; compliance</span></div><div class="interest reveal"><span>Business intelligence &amp; data analysis</span></div><div class="interest reveal"><span>Investment analysis</span></div><div class="interest reveal"><span>Financial risk analysis</span></div><div class="interest reveal"><span>Strategic financial decision-making</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="documents">
-      <div class="shell documents-row reveal">
-        <div><span class="eyebrow">08 · Professional documents</span><h3>Professional CV</h3><p>Contact me by email to request a copy of my current CV and verified course details.</p></div>
-        <a class="button button-secondary" href="mailto:johnmmbando24@gmail.com?subject=CV%20request%20%E2%80%94%20John%20Gabriel%20Mmbando">Request CV <span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="shell contact-grid">
-        <div class="reveal"><span class="eyebrow">09 · Contact</span><h2>Let’s connect around accountable finance.</h2><p class="contact-copy">I welcome conversations about grants management, financial monitoring, compliance, risk and financial analysis opportunities.</p><a class="button button-primary" href="mailto:johnmmbando24@gmail.com?subject=Professional%20inquiry%20%E2%80%94%20John%20Gabriel%20Mmbando">Email John <span class="arrow" aria-hidden="true">↗</span></a></div>
-        <div class="contact-panel reveal">
-          <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><span>Email</span><a href="mailto:johnmmbando24@gmail.com">johnmmbando24@gmail.com</a></div></div>
-          <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg><div><span>Phone</span><a href="tel:+255750219525">+255 750 219 525</a></div></div>
-          <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span>Location</span><strong>Dar es Salaam, Tanzania</strong></div></div>
-          <div class="contact-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 1 0 0 8"/><path d="M8 12h13M19 9l3 3-3 3"/></svg><div><span>LinkedIn</span><a href="https://www.linkedin.com/in/john-mmbando" target="_blank" rel="noopener noreferrer">linkedin.com/in/john-mmbando</a></div></div>
-          <p class="contact-note">This static site uses a direct email link. No form data is collected or stored.</p>
-        </div>
+        <p class="data-note"><strong>Case-study data note:</strong> Synthetic data · simulated updates. These fictional demonstrations are separate from my verified work and do not represent live work or employer projects.</p>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> John Gabriel Mmbando · Tanzania</span><span>Professional profile · <a href="#top">Back to top ↑</a></span></div></footer>
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    menuButton.addEventListener('click', () => {
-      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-      nav.classList.toggle('open', !isOpen);
-    });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation');
-      nav.classList.remove('open');
-    }));
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      }), { threshold: 0.08 });
-      document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
-    } else document.querySelectorAll('.reveal').forEach(item => item.classList.add('visible'));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© 2026 John Gabriel Mmbando · Tanzania</span><nav class="footer-links" aria-label="Footer navigation"><a href="#top">Front page ↑</a><a href="portfolio/">Full portfolio</a><a href="mailto:johnmmbando24@gmail.com">Email John</a></nav></div></footer>
 </body>
 </html>
 
