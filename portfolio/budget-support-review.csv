@@ -1,0 +1,6 @@
+﻿category,review_period,supporting_packs_reviewed,supporting_packs_complete,supporting_packs_pending,completion_percent,value_with_pending_support_tzs,interpretation,data_classification
+Personnel,January-June,58,56,2,96.6,600000,Follow up for missing or incomplete records; not a disallowance conclusion,Synthetic
+Community outreach,January-June,32,27,5,84.4,1500000,Follow up for missing or incomplete records; not a disallowance conclusion,Synthetic
+Medical supplies,January-June,40,34,6,85.0,2400000,Follow up for missing or incomplete records; not a disallowance conclusion,Synthetic
+Travel and supervision,January-June,18,16,2,88.9,500000,Follow up for missing or incomplete records; not a disallowance conclusion,Synthetic
+Total,January-June,148,133,15,89.9,5000000,Follow-up population only; determine eligibility from actual source records and applicable rules,Synthetic

@@ -1,6 +1,6 @@
-category,annual_budget_tzs,ytd_plan_tzs,ytd_actual_tzs,variance_tzs,variance_percent
-Personnel,48000000,24000000,24600000,600000,2.5%
-Community outreach,36000000,18000000,15300000,-2700000,-15.0%
-Medical supplies,24000000,12000000,9000000,-3000000,-25.0%
-Travel and supervision,12000000,6000000,5100000,-900000,-15.0%
-Total,120000000,60000000,54000000,-6000000,-10.0%
+﻿category,annual_budget_tzs,budget_share_percent,ytd_plan_tzs,ytd_actual_tzs,ytd_variance_tzs,ytd_variance_percent,ytd_budget_utilization_percent,h2_forecast_tzs,year_end_forecast_tzs,forecast_vs_annual_budget_tzs,supporting_packs_reviewed,supporting_packs_complete,supporting_packs_pending,supporting_packs_complete_percent,value_with_pending_support_tzs,data_classification
+Personnel,48000000,40.0,24000000,24600000,600000,2.5,51.3,23400000,48000000,0,58,56,2,96.6,600000,Synthetic
+Community outreach,36000000,30.0,18000000,15300000,-2700000,-15.0,42.5,17100000,32400000,-3600000,32,27,5,84.4,1500000,Synthetic
+Medical supplies,24000000,20.0,12000000,9000000,-3000000,-25.0,37.5,12600000,21600000,-2400000,40,34,6,85.0,2400000,Synthetic
+Travel and supervision,12000000,10.0,6000000,5100000,-900000,-15.0,42.5,5400000,10500000,-1500000,18,16,2,88.9,500000,Synthetic
+Total,120000000,100.0,60000000,54000000,-6000000,-10.0,45.0,58500000,112500000,-7500000,148,133,15,89.9,5000000,Synthetic
