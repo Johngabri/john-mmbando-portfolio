@@ -40,6 +40,14 @@
     .metric-value { display:block; margin:9px 0 3px; font:800 clamp(21px,3vw,29px)/1.15 'Manrope',sans-serif; letter-spacing:-.04em; }
     .metric-detail { color:var(--ink-soft); font-size:12px; }
     .metric.variance { border-top:3px solid var(--gold); }
+    .decision-brief { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:22px; margin:0 0 18px; padding:24px; border:1px solid var(--line); border-radius:17px; background:white; }
+    .decision-brief-kicker { color:var(--teal); font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .decision-brief h2 { margin:9px 0 8px; font-size:22px; line-height:1.2; }
+    .decision-brief-lede p { margin:0; color:var(--ink-soft); font-size:13px; }
+    .decision-brief-points { display:grid; gap:8px; }
+    .decision-point { padding:11px 13px; border-radius:10px; background:#f6f8f5; }
+    .decision-point strong { display:block; margin-bottom:3px; color:var(--teal-dark); font-size:11px; }
+    .decision-point p { margin:0; color:var(--ink-soft); font-size:11px; line-height:1.5; }
     .panel { margin-top:18px; padding:27px; background:white; border:1px solid var(--line); border-radius:17px; }
     .panel-heading { margin-bottom:19px; }
     .panel-heading h2 { margin:0 0 5px; font-size:23px; }
@@ -107,6 +115,7 @@
     :focus-visible { outline:3px solid #d1af70; outline-offset:3px; }
     @media(max-width:760px) {
       .summary-grid { grid-template-columns:repeat(2,1fr); }
+      .decision-brief { grid-template-columns:1fr; gap:14px; padding:19px; }
       .insight-grid { grid-template-columns:1fr; }
       .insight { min-height:0; }
       .scenario-grid { grid-template-columns:1fr; }
@@ -159,8 +168,20 @@
     <section class="dashboard" aria-label="Budget performance analysis">
       <div class="wrap">
         <nav class="jump-nav" aria-label="Budget analysis sections">
-          <div class="jump-links"><a href="#position">Summary</a><a href="#drivers">Category drivers</a><a href="#trend">Monthly trend</a><a href="#forecast">Forecast</a><a href="#evidence">Records review</a><a href="#downloads">Downloads</a></div>
+          <div class="jump-links"><a href="#decision-brief">Decision brief</a><a href="#position">Figures</a><a href="#drivers">Category drivers</a><a href="#trend">Monthly trend</a><a href="#forecast">Forecast</a><a href="#evidence">Records review</a><a href="#downloads">Downloads</a></div>
         </nav>
+        <section class="decision-brief" id="decision-brief" aria-labelledby="decision-brief-title">
+          <div class="decision-brief-lede">
+            <span class="decision-brief-kicker">Management brief · 60-second read</span>
+            <h2 id="decision-brief-title">What should be checked before the forecast changes?</h2>
+            <p>Through June, the synthetic sample records TZS 54.0M against TZS 60.0M planned: TZS 6.0M below plan, with all six months below plan.</p>
+          </div>
+          <div class="decision-brief-points">
+            <article class="decision-point"><strong>Interpretation</strong><p>A persistent gap is a review signal. It does not establish the cause, a saving, or non-compliance.</p></article>
+            <article class="decision-point"><strong>Follow-up</strong><p>Check supplies and outreach timing, commitments and delivery evidence. Follow up the 15 incomplete synthetic packs with an owner and due date.</p></article>
+            <article class="decision-point"><strong>Decision boundary</strong><p>Update the forecast only against validated activities, the approved plan and applicable terms. Sample phasing and figures are illustrative.</p></article>
+          </div>
+        </section>
         <div class="summary-grid" aria-label="Summary figures for the synthetic sample">
           <article class="metric"><span class="metric-label">Approved annual budget</span><strong class="metric-value">TZS 120.0M</strong><span class="metric-detail">Fictional sample budget</span></article>
           <article class="metric"><span class="metric-label">Planned through June</span><strong class="metric-value">TZS 60.0M</strong><span class="metric-detail">50% of annual budget</span></article>
@@ -303,3 +324,4 @@
   <footer class="footer"><div class="wrap footer-inner"><span>Independent synthetic-data exercise · John Gabriel Mmbando</span><a href="index.html">Return to portfolio ↑</a></div></footer>
 </body>
 </html>
+
