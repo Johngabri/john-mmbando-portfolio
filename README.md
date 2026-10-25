@@ -18,7 +18,7 @@ The public profile includes the verified role dates, current CPA study status, L
 
 The portfolio includes an independent budget-performance review at `portfolio/budget-dashboard.html` with a downloadable PDF interpretation and a ZIP containing the category summary, monthly detail, supporting-record review, forecast scenarios, and data guide. All figures are synthetic and must remain clearly separated from verified employment achievements. Add new analytical samples only after completion, using synthetic or public data.
 
-The four independent interactive case studies each provide a browser-generated Markdown report. Each report includes its fictional case figures, the effect of every available choice, and the selections and simulated result visible when it is downloaded. Reports are generated locally in the visitor's browser and do not use a backend.
+The four independent interactive case studies each provide a browser-generated PDF report. Each report includes its fictional case figures, the effect of every available choice, and the selections and simulated result visible when it is downloaded. Reports are generated locally in the visitor's browser and do not use a backend.
 
 ## Contact behavior
 
