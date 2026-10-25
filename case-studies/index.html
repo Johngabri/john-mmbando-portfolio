@@ -1369,23 +1369,35 @@
           }
 
           var filename = reportType + "-full-case-report.pdf";
-          var url = "";
-          try {
-            var blob = new Blob([makePdf(reportFor(root))], { type: "application/pdf" });
-            url = window.URL.createObjectURL(blob);
-            var link = document.createElement("a");
-            link.href = url;
-            link.download = filename;
-            link.hidden = true;
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-            window.setTimeout(function () { window.URL.revokeObjectURL(url); }, 1000);
-            if (status) status.textContent = "Downloaded " + filename + " with all choice effects and the current case state.";
-          } catch (error) {
-            if (url) window.URL.revokeObjectURL(url);
-            if (status) status.textContent = "Your browser could not create the PDF report. Please try again.";
+          if (status) status.textContent = "Preparing a PDF with every choice effect and the current case response.";
+
+          function createReportWhenReady(attemptsRemaining) {
+            var updateStatus = textOf(root.querySelector(".update-status"));
+            if (/simulated update arriving/i.test(updateStatus) && attemptsRemaining > 0) {
+              window.setTimeout(function () { createReportWhenReady(attemptsRemaining - 1); }, 100);
+              return;
+            }
+
+            var url = "";
+            try {
+              var blob = new Blob([makePdf(reportFor(root))], { type: "application/pdf" });
+              url = window.URL.createObjectURL(blob);
+              var link = document.createElement("a");
+              link.href = url;
+              link.download = filename;
+              link.hidden = true;
+              document.body.appendChild(link);
+              link.click();
+              link.remove();
+              window.setTimeout(function () { window.URL.revokeObjectURL(url); }, 1000);
+              if (status) status.textContent = "Downloaded " + filename + " with all choice effects and the current case state.";
+            } catch (error) {
+              if (url) window.URL.revokeObjectURL(url);
+              if (status) status.textContent = "Your browser could not create the PDF report. Please try again.";
+            }
           }
+
+          createReportWhenReady(40);
         });
       });
     }());
