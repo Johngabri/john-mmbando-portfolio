@@ -233,6 +233,11 @@
     .note-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-deep); color: var(--navy); font-weight: 800; }
     .assumption-note p { margin: 0; }
     .assumption-note strong { color: var(--ink); }
+    .case-report-download { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 18px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: var(--shadow); }
+    .case-report-copy { max-width: 610px; }
+    .case-report-copy strong { display: block; margin-bottom: 3px; color: var(--ink); font-size: .94rem; }
+    .case-report-copy p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+    .case-report-status { min-height: 1.35em; margin: 6px 0 0; color: var(--teal-dark); font-size: .76rem; }
     .experience-section { padding: 4px 0 74px; }
     .experience-box { padding: clamp(22px,4vw,38px); border-radius: 26px; background: #e9eeea; }
     .experience-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; margin-bottom: 22px; }
@@ -271,6 +276,8 @@
       .demo-ribbon small { padding-left: 41px; text-align: left; }
       .case-index { grid-template-columns: 1fr; }
       .case-grid, .decision-grid, .asset-grid { grid-template-columns: 1fr; }
+      .case-report-download { align-items: stretch; flex-direction: column; }
+      .case-report-download .button { width: 100%; }
       .section { padding-bottom: 48px; }
       .experience-top { flex-direction: column; }
       .footer-inner { flex-direction: column; }
@@ -492,6 +499,10 @@
         </div>
       </div>
     </section>
+    <div class="wrap case-report-download" aria-label="GrantPulse report download">
+      <div class="case-report-copy"><strong>Take the full GrantPulse analysis with you</strong><p>Download a report with the synthetic figures, every choice and its simulated effect, plus the selections and outcome currently shown above.</p><p class="case-report-status" id="grantpulseReportStatus" role="status" aria-live="polite"></p></div>
+      <button class="button button-small" type="button" data-case-report="grantpulse" aria-label="Download the full GrantPulse case report">Download full report <span aria-hidden="true">↓</span></button>
+    </div>
     </section>
 
     <section class="section asset-section" id="asset-case" aria-labelledby="fieldProofTitle">
@@ -554,6 +565,10 @@
           <span class="note-mark" aria-hidden="true">i</span>
           <p><strong>Fictional case:</strong> the 12 records, asset labels, exceptions, and simulated responses are invented for this demonstration. They are separate from the verified fieldwork achievement listed below; no employer, partner, facility, or location records are used.</p>
         </div>
+        <div class="case-report-download" aria-label="FieldProof report download">
+          <div class="case-report-copy"><strong>Take the full FieldProof analysis with you</strong><p>Download all three first-step options, the effect of each evidence choice, and the selections and simulated outcome currently shown.</p><p class="case-report-status" id="fieldproofReportStatus" role="status" aria-live="polite"></p></div>
+          <button class="button button-small" type="button" data-case-report="fieldproof" aria-label="Download the full FieldProof case report">Download full report <span aria-hidden="true">↓</span></button>
+        </div>
       </div>
     </section>
 
@@ -610,6 +625,10 @@
           </article>
         </div>
         <div class="assumption-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Fictional case:</strong> TZS 42.0M, TZS 39.5M, and the TZS 2.5M difference are synthetic. The case demonstrates reconciliation judgment; it does not describe a real request or prescribe an employer's approval process.</p></div>
+        <div class="case-report-download" aria-label="RequestReady report download">
+          <div class="case-report-copy"><strong>Take the full RequestReady analysis with you</strong><p>Download the request figures, all action and evidence choices with their effects, and the selections and simulated outcome currently shown.</p><p class="case-report-status" id="requestReportStatus" role="status" aria-live="polite"></p></div>
+          <button class="button button-small" type="button" data-case-report="requestready" aria-label="Download the full RequestReady case report">Download full report <span aria-hidden="true">↓</span></button>
+        </div>
       </div>
     </section>
 
@@ -668,6 +687,10 @@
           </article>
         </div>
         <div class="assumption-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Fictional case:</strong> all four closeout amounts are invented. The TZS 0.5M difference and TZS 4.5M balance are prompts for review, not findings about a real partner or donor requirement.</p></div>
+        <div class="case-report-download" aria-label="Closeout Compass report download">
+          <div class="case-report-copy"><strong>Take the full Closeout Compass analysis with you</strong><p>Download the closeout figures, every action and conclusion choice with its effect, and the selections and simulated outcome currently shown.</p><p class="case-report-status" id="closeoutReportStatus" role="status" aria-live="polite"></p></div>
+          <button class="button button-small" type="button" data-case-report="closeout" aria-label="Download the full Closeout Compass case report">Download full report <span aria-hidden="true">↓</span></button>
+        </div>
       </div>
     </section>
 
@@ -738,6 +761,14 @@
         approve: { tone: "caution", text: "Clearing the line now would leave its support unchecked. Keep the review open until the documents are reviewed." },
         reject: { tone: "caution", text: "A missing record calls for follow-up. It does not prove a problem by itself; review the support before deciding." }
       };
+      var choiceEffects = {
+        request: "Simulated effect: the schedule and attendance record for the TZS 21.2M line arrive. Assumption: these are two of four pending records, so completeness moves from 25/29 to 27/29 and two unspecified records remain open. The TZS 9.4M below-plan difference still needs context.",
+        approve: "Simulated effect: the line is cleared before support is reviewed. Completeness stays at 25/29, all four records remain pending, and the line still lacks its schedule and attendance record. Reopen the documentation follow-up; review the spending difference separately.",
+        reject: "Simulated effect: the line is rejected while the file remains at 25/29, with four records pending. The missing records alone do not establish a final finding; request and review support before reassessing. The spending difference remains open."
+      };
+      choices.forEach(function (button) {
+        button.setAttribute("data-report-effect", choiceEffects[button.getAttribute("data-choice")]);
+      });
 
       function resetQuestionsFrom(startIndex) {
         reviewQuestions.forEach(function (question, questionIndex) {
@@ -964,6 +995,14 @@
         }
       };
 
+      actionButtons.forEach(function (button) {
+        button.setAttribute("data-report-effect", actionResponses[button.getAttribute("data-asset-action")].text);
+      });
+      evidenceButtons.forEach(function (button) {
+        var response = evidenceResponses[button.getAttribute("data-asset-evidence")];
+        button.setAttribute("data-report-effect", response.feedback + " Simulated outcome: " + response.outcome);
+      });
+
       function setPressed(buttons, selectedButton) {
         buttons.forEach(function (button) {
           var selected = button === selectedButton;
@@ -1082,6 +1121,14 @@
         var selectedAction = "";
 
         actionButtons.forEach(function (button) {
+          button.setAttribute("data-report-effect", config.actionResponses[button.getAttribute(config.actionAttribute)].text);
+        });
+        evidenceButtons.forEach(function (button) {
+          var response = config.evidenceResponses[button.getAttribute(config.evidenceAttribute)];
+          button.setAttribute("data-report-effect", response.feedback + " Simulated outcome: " + response.outcome);
+        });
+
+        actionButtons.forEach(function (button) {
           button.addEventListener("click", function () {
             var action = button.getAttribute(config.actionAttribute);
             if (selectedAction === action) return;
@@ -1117,6 +1164,120 @@
       }
 
       cases.forEach(bindCase);
+    }());
+
+    (function () {
+      var reportButtons = Array.prototype.slice.call(document.querySelectorAll("[data-case-report]"));
+
+      function textOf(element) {
+        return element ? (element.innerText || element.textContent).replace(/\s+/g, " ").trim() : "";
+      }
+
+      function markdownSafe(value) {
+        return String(value || "").replace(/\r/g, "").trim();
+      }
+
+      function reportFor(root) {
+        var title = textOf(root.querySelector("h2"));
+        var lede = textOf(root.querySelector(".section-heading .section-lede"));
+        var lines = ["# " + title + " — Full case analysis", "", "**Synthetic data · simulated updates**", "", lede, "", "## Scenario figures"];
+        var metrics = Array.prototype.slice.call(root.querySelectorAll(".metric, .asset-stat"));
+        if (metrics.length) {
+          metrics.forEach(function (metric) {
+            var label = textOf(metric.querySelector(".metric-label")) || textOf(metric.querySelector("span"));
+            var value = textOf(metric.querySelector(".metric-value")) || textOf(metric.querySelector("strong"));
+            var note = textOf(metric.querySelector(".metric-note"));
+            if (label && value) lines.push("- **" + label + ":** " + value + (note ? " — " + note : ""));
+          });
+        } else {
+          lines.push("- No numeric summary is shown in this case.");
+        }
+
+        var budgetNotes = Array.prototype.slice.call(root.querySelectorAll(".budget-summary span, .budget-foot, .support-count, .pending-item, .legend"));
+        if (budgetNotes.length) {
+          lines.push("", "## Budget and supporting-record position");
+          budgetNotes.forEach(function (item) { lines.push("- " + textOf(item)); });
+        }
+
+        var evidenceItems = Array.prototype.slice.call(root.querySelectorAll(".asset-exception"));
+        if (evidenceItems.length) {
+          lines.push("", "## Evidence and open points");
+          evidenceItems.forEach(function (item) { lines.push("- " + textOf(item)); });
+        }
+
+        var assumptionNotes = Array.prototype.slice.call(root.querySelectorAll(".assumption-note p"));
+        if (assumptionNotes.length) {
+          lines.push("", "## Assumptions and interpretation");
+          assumptionNotes.forEach(function (note) { lines.push("- " + textOf(note)); });
+        }
+
+        var groups = Array.prototype.slice.call(root.querySelectorAll(".choice-list, .answer-list, .asset-choice-group"));
+        lines.push("", "## Every choice and its simulated effect");
+        lines.push("Each option below is preserved from the interactive case. Later steps may depend on the selections made earlier.");
+        groups.forEach(function (group, index) {
+          var groupLabel = group.getAttribute("aria-label") || "Decision step " + (index + 1);
+          var notReached = Boolean(group.closest("[hidden]"));
+          lines.push("", "### " + groupLabel + (notReached ? " (conditional step)" : ""));
+          var buttons = Array.prototype.slice.call(group.querySelectorAll("button"));
+          buttons.forEach(function (button) {
+            var label = textOf(button.querySelector("strong")) || textOf(button);
+            var detail = textOf(button.querySelector("small"));
+            var effect = button.getAttribute("data-report-effect") || button.getAttribute("data-response") || detail || "The page does not define an additional simulated effect for this option.";
+            var selected = button.getAttribute("aria-pressed") === "true";
+            lines.push("", "- **" + (selected ? "Selected: " : "Option: ") + label + "**");
+            if (detail && detail !== effect) lines.push("  - Choice note: " + detail);
+            lines.push("  - Simulated effect: " + effect);
+          });
+        });
+
+        var selectedChoices = Array.prototype.slice.call(root.querySelectorAll(".choice[aria-pressed='true'], .answer-choice[aria-pressed='true']"));
+        lines.push("", "## Current selections");
+        if (selectedChoices.length) {
+          selectedChoices.forEach(function (button) {
+            var group = button.closest(".choice-list, .answer-list, .asset-choice-group");
+            lines.push("- " + (group && group.getAttribute("aria-label") ? group.getAttribute("aria-label") + ": " : "") + (textOf(button.querySelector("strong")) || textOf(button)));
+          });
+        } else {
+          lines.push("- No choice has been selected yet. The report still lists the effect of every available option.");
+        }
+
+        var currentPanels = Array.prototype.slice.call(root.querySelectorAll(".update-status, .outcome, .timeline li, .asset-update, .asset-final, .final-summary"));
+        var currentText = currentPanels.filter(function (panel) { return !panel.hidden; }).map(textOf).filter(Boolean);
+        lines.push("", "## Current simulated response");
+        lines.push(currentText.length ? currentText.map(function (item) { return "- " + item; }).join("\n") : "No simulated response has been selected yet.");
+
+        lines.push("", "## Scope and limitations");
+        lines.push("This report is generated in the browser from the fictional case and the current page selections. It does not connect to live systems. Figures and outcomes are illustrative only; they are not real transactions, employer results, donor rules, audit findings, or a determination of eligibility.");
+        lines.push("", "---", "Prepared from the portfolio case study by John Gabriel Mmbando.");
+        return lines.map(markdownSafe).join("\n").replace(/\n{3,}/g, "\n\n") + "\n";
+      }
+
+      reportButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var reportType = button.getAttribute("data-case-report");
+          var sectionId = { grantpulse: "grantpulse-case", fieldproof: "asset-case", requestready: "request-case", closeout: "closeout-case" }[reportType];
+          var statusId = { grantpulse: "grantpulseReportStatus", fieldproof: "fieldproofReportStatus", requestready: "requestReportStatus", closeout: "closeoutReportStatus" }[reportType];
+          var root = document.getElementById(sectionId);
+          var status = document.getElementById(statusId);
+          if (!root || !window.Blob || !window.URL || !window.URL.createObjectURL) {
+            if (status) status.textContent = "Your browser could not create the report download.";
+            return;
+          }
+
+          var filename = reportType + "-full-case-report.md";
+          var blob = new Blob([reportFor(root)], { type: "text/markdown;charset=utf-8" });
+          var url = window.URL.createObjectURL(blob);
+          var link = document.createElement("a");
+          link.href = url;
+          link.download = filename;
+          link.hidden = true;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          window.setTimeout(function () { window.URL.revokeObjectURL(url); }, 1000);
+          if (status) status.textContent = "Downloaded " + filename + " with all choice effects and the current case state.";
+        });
+      });
     }());
   </script>
 </body>

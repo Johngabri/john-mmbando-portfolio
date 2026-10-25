@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102c40">
-  <meta name="description" content="An independent budget performance review using synthetic data, demonstrating year-to-date plan and actual analysis, variance review and evidence-led follow-up.">
+  <meta name="description" content="An independent synthetic-data budget review with monthly trends, category variance drivers, forecast scenarios, supporting-record analysis, and downloadable report and data.">
   <title>Budget Performance Sample | John Gabriel Mmbando</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,24 @@
     .insight-number { display:block; margin-bottom:8px; color:var(--teal); font:800 12px 'Manrope',sans-serif; letter-spacing:.08em; }
     .insight h3 { margin:0 0 7px; font-size:16px; }
     .insight p { margin:0; color:var(--ink-soft); font-size:13px; }
+    .jump-nav { padding:0 0 10px; }
+    .jump-links { display:flex; flex-wrap:wrap; gap:8px; }
+    .jump-links a { padding:7px 11px; color:var(--teal-dark); background:white; border:1px solid var(--line); border-radius:99px; font-size:11px; font-weight:700; text-decoration:none; }
+    .jump-links a:hover { background:var(--teal-pale); }
+    .analysis-note { margin-top:16px; padding:14px 16px; color:var(--ink-soft); background:#f3ecdc; border-left:3px solid var(--gold); border-radius:0 10px 10px 0; font-size:12px; }
+    .scenario-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
+    .scenario-card { padding:16px; background:#f6f8f5; border:1px solid var(--line); border-radius:12px; }
+    .scenario-card span { display:block; color:var(--muted); font-size:11px; }
+    .scenario-card strong { display:block; margin:4px 0; color:var(--navy); font:800 20px 'Manrope',sans-serif; }
+    .scenario-card p { margin:0; color:var(--ink-soft); font-size:11px; }
+    .action-list { display:grid; grid-template-columns:repeat(2,1fr); gap:11px 20px; margin:15px 0 0; padding-left:20px; }
+    .action-list li { padding-left:3px; color:#e2eaeb; font-size:12px; }
+    .download-panel { color:white; background:var(--navy); border-color:var(--navy); }
+    .download-panel .panel-heading p { color:#dbe5e7; }
+    .download-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .download-secondary { color:var(--navy); background:white; }
+    .download-secondary:hover { background:#f3ecdc; }
+    .download-note { margin:14px 0 0; color:#dbe5e7; font-size:11px; }
     .follow-up { display:grid; grid-template-columns:1fr auto; align-items:center; gap:22px; padding:23px; color:white; background:var(--navy); border-radius:15px; }
     .follow-up h2 { margin:0 0 6px; font-size:20px; }
     .follow-up p { margin:0; color:#e2eaeb; font-size:13px; }
@@ -91,6 +109,8 @@
       .summary-grid { grid-template-columns:repeat(2,1fr); }
       .insight-grid { grid-template-columns:1fr; }
       .insight { min-height:0; }
+      .scenario-grid { grid-template-columns:1fr; }
+      .action-list { grid-template-columns:1fr; }
       .bar-row { grid-template-columns:120px minmax(70px,1fr); gap:9px 12px; }
       .bar-value { grid-column:2; }
       .follow-up { grid-template-columns:1fr; }
@@ -131,13 +151,16 @@
         <p class="hero-copy">This synthetic year-to-date budget review compares plan with recorded expenditure, traces category variances, and identifies what to verify before explaining them.</p>
         <aside class="sample-note" aria-label="Data and scope note">
           <span aria-hidden="true">i</span>
-          <div><strong>Illustrative data only</strong>All figures are fictional. This is an independent demonstration, not employer work, a donor threshold, or a finding about a real programme.</div>
+          <div><strong>Synthetic data · illustrative assumptions</strong>All figures and records are fictional. This is an independent demonstration, not employer work, a donor threshold, a live update, or a finding about a real programme.</div>
         </aside>
       </div>
     </section>
 
     <section class="dashboard" aria-label="Budget performance analysis">
       <div class="wrap">
+        <nav class="jump-nav" aria-label="Budget analysis sections">
+          <div class="jump-links"><a href="#position">Summary</a><a href="#drivers">Category drivers</a><a href="#trend">Monthly trend</a><a href="#forecast">Forecast</a><a href="#evidence">Records review</a><a href="#downloads">Downloads</a></div>
+        </nav>
         <div class="summary-grid" aria-label="Summary figures for the synthetic sample">
           <article class="metric"><span class="metric-label">Approved annual budget</span><strong class="metric-value">TZS 120.0M</strong><span class="metric-detail">Fictional sample budget</span></article>
           <article class="metric"><span class="metric-label">Planned through June</span><strong class="metric-value">TZS 60.0M</strong><span class="metric-detail">50% of annual budget</span></article>
@@ -145,7 +168,7 @@
           <article class="metric variance"><span class="metric-label">Actual versus plan</span><strong class="metric-value">−TZS 6.0M</strong><span class="metric-detail">10% below year-to-date plan</span></article>
         </div>
 
-        <section class="panel" aria-labelledby="position-title">
+        <section class="panel" id="position" aria-labelledby="position-title">
           <div class="panel-heading"><h2 id="position-title">Spending position through June</h2><p>Actual spend is shown against the approved annual budget.</p></div>
           <div class="bars" role="img" aria-label="Year-to-date plan is 50 percent of the approved annual budget. Recorded expenditure is 45 percent.">
             <div class="bar-row"><span class="bar-label">Year-to-date plan</span><span class="bar-track"><span class="bar-fill plan"></span></span><span class="bar-value"><strong>TZS 60.0M</strong> · 50%</span></div>
@@ -154,24 +177,92 @@
           <div class="chart-legend"><span class="legend-item"><span class="legend-swatch" aria-hidden="true"></span>Plan</span><span class="legend-item"><span class="legend-swatch actual" aria-hidden="true"></span>Recorded expenditure</span><span>Review period: January–June · illustrative</span></div>
         </section>
 
-        <section class="panel" aria-labelledby="table-title">
-          <div class="panel-heading"><h2 id="table-title">Budget by category</h2><p>Negative variance means recorded spending is below plan; positive means it is above plan.</p></div>
+        <section class="panel" id="drivers" aria-labelledby="table-title">
+          <div class="panel-heading"><h2 id="table-title">Category variance drivers</h2><p>Negative variance means recorded spending is below plan; positive means it is above plan.</p></div>
           <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable synthetic budget data table">
             <table>
-              <caption>Synthetic approved budget, year-to-date plan and recorded expenditure in Tanzanian shillings.</caption>
-              <thead><tr><th scope="col">Category</th><th scope="col">Annual budget</th><th scope="col">YTD plan</th><th scope="col">YTD actual</th><th scope="col">Variance</th><th scope="col">Variance %</th></tr></thead>
+              <caption>Synthetic budget share, January-June plan and recorded expenditure in Tanzanian shillings.</caption>
+              <thead><tr><th scope="col">Category</th><th scope="col">Annual budget</th><th scope="col">Budget share</th><th scope="col">YTD plan</th><th scope="col">YTD actual</th><th scope="col">Variance</th><th scope="col">Variance %</th><th scope="col">Annual budget used</th></tr></thead>
               <tbody>
-                <tr><td>Personnel</td><td>48.0M</td><td>24.0M</td><td>24.6M</td><td class="above">+0.6M</td><td class="above">+2.5%</td></tr>
-                <tr><td>Community outreach</td><td>36.0M</td><td>18.0M</td><td>15.3M</td><td class="below">−2.7M</td><td class="below">−15.0%</td></tr>
-                <tr><td>Medical supplies</td><td>24.0M</td><td>12.0M</td><td>9.0M</td><td class="below">−3.0M</td><td class="below">−25.0%</td></tr>
-                <tr><td>Travel &amp; supervision</td><td>12.0M</td><td>6.0M</td><td>5.1M</td><td class="below">−0.9M</td><td class="below">−15.0%</td></tr>
+                <tr><td>Personnel</td><td>48.0M</td><td>40.0%</td><td>24.0M</td><td>24.6M</td><td class="above">+0.6M</td><td class="above">+2.5%</td><td>51.3%</td></tr>
+                <tr><td>Community outreach</td><td>36.0M</td><td>30.0%</td><td>18.0M</td><td>15.3M</td><td class="below">−2.7M</td><td class="below">−15.0%</td><td>42.5%</td></tr>
+                <tr><td>Medical supplies</td><td>24.0M</td><td>20.0%</td><td>12.0M</td><td>9.0M</td><td class="below">−3.0M</td><td class="below">−25.0%</td><td>37.5%</td></tr>
+                <tr><td>Travel &amp; supervision</td><td>12.0M</td><td>10.0%</td><td>6.0M</td><td>5.1M</td><td class="below">−0.9M</td><td class="below">−15.0%</td><td>42.5%</td></tr>
               </tbody>
-              <tfoot><tr><td>Total</td><td>120.0M</td><td>60.0M</td><td>54.0M</td><td>−6.0M</td><td>−10.0%</td></tr></tfoot>
+              <tfoot><tr><td>Total</td><td>120.0M</td><td>100.0%</td><td>60.0M</td><td>54.0M</td><td>−6.0M</td><td>−10.0%</td><td>45.0%</td></tr></tfoot>
             </table>
+          </div>
+          <div class="analysis-note"><strong>Concentration:</strong> Medical supplies and community outreach account for TZS 5.7M, or 95%, of the net TZS 6.0M variance. Personnel is TZS 0.6M above plan and offsets part of the category underspend. Confirm timing, commitments, delivery evidence, and coding before explaining the causes.</div>
+        </section>
+
+        <section class="panel" id="trend" aria-labelledby="trend-title">
+          <div class="panel-heading"><h2 id="trend-title">Monthly trend and quarterly movement</h2><p>Monthly plan is evenly phased at TZS 10.0M in this illustration. Cumulative variance shows the running gap from January.</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable monthly budget trend table">
+            <table>
+              <caption>Monthly and cumulative plan-to-actual comparison, January-June, synthetic data.</caption>
+              <thead><tr><th scope="col">Period</th><th scope="col">Plan</th><th scope="col">Actual</th><th scope="col">Variance</th><th scope="col">Variance %</th><th scope="col">Cumulative variance</th></tr></thead>
+              <tbody>
+                <tr><td>January</td><td>10.0M</td><td>8.9M</td><td class="below">−1.1M</td><td>−11.0%</td><td>−1.1M</td></tr>
+                <tr><td>February</td><td>10.0M</td><td>8.7M</td><td class="below">−1.3M</td><td>−13.0%</td><td>−2.4M</td></tr>
+                <tr><td>March</td><td>10.0M</td><td>9.0M</td><td class="below">−1.0M</td><td>−10.0%</td><td>−3.4M</td></tr>
+                <tr><td>April</td><td>10.0M</td><td>9.0M</td><td class="below">−1.0M</td><td>−10.0%</td><td>−4.4M</td></tr>
+                <tr><td>May</td><td>10.0M</td><td>9.2M</td><td class="below">−0.8M</td><td>−8.0%</td><td>−5.2M</td></tr>
+                <tr><td>June</td><td>10.0M</td><td>9.2M</td><td class="below">−0.8M</td><td>−8.0%</td><td>−6.0M</td></tr>
+                <tr><td>Q1 total</td><td>30.0M</td><td>26.6M</td><td class="below">−3.4M</td><td>−11.3%</td><td>−3.4M</td></tr>
+                <tr><td>Q2 total</td><td>30.0M</td><td>27.4M</td><td class="below">−2.6M</td><td>−8.7%</td><td>−6.0M</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="insight-grid" style="margin-top:16px">
+            <article class="insight"><span class="insight-number">REPEATED SIGNAL</span><h3>Below plan in 6 of 6 months</h3><p>The monthly gap narrowed from TZS 1.3M in February to TZS 0.8M in June, but the pattern remains persistent and needs a timing and delivery explanation.</p></article>
+            <article class="insight"><span class="insight-number">QUARTER-TO-QUARTER</span><h3>Q2 gap narrowed by TZS 0.8M</h3><p>Q2 variance was TZS 2.6M below plan versus TZS 3.4M in Q1, a 23.5% smaller quarterly gap. This indicates improvement, not resolution.</p></article>
+            <article class="insight"><span class="insight-number">BUDGET UTILIZATION</span><h3>45% used against 50% planned</h3><p>Actual utilization trails the simple phased budget by 5 percentage points at June. Real spending plans may be seasonal rather than even.</p></article>
           </div>
         </section>
 
-        <section class="panel" aria-labelledby="findings-title">
+        <section class="panel" id="forecast" aria-labelledby="forecast-title">
+          <div class="panel-heading"><h2 id="forecast-title">Year-end forecast and sensitivity</h2><p>The base case combines actuals through June with fictional July-December schedule estimates.</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable category forecast table">
+            <table>
+              <caption>Base synthetic forecast in Tanzanian shillings.</caption>
+              <thead><tr><th scope="col">Category</th><th scope="col">Annual budget</th><th scope="col">YTD actual</th><th scope="col">Jul-Dec estimate</th><th scope="col">FY forecast</th><th scope="col">Forecast vs budget</th></tr></thead>
+              <tbody>
+                <tr><td>Personnel</td><td>48.0M</td><td>24.6M</td><td>23.4M</td><td>48.0M</td><td>0.0M</td></tr>
+                <tr><td>Community outreach</td><td>36.0M</td><td>15.3M</td><td>17.1M</td><td>32.4M</td><td class="below">−3.6M</td></tr>
+                <tr><td>Medical supplies</td><td>24.0M</td><td>9.0M</td><td>12.6M</td><td>21.6M</td><td class="below">−2.4M</td></tr>
+                <tr><td>Travel &amp; supervision</td><td>12.0M</td><td>5.1M</td><td>5.4M</td><td>10.5M</td><td class="below">−1.5M</td></tr>
+              </tbody>
+              <tfoot><tr><td>Total</td><td>120.0M</td><td>54.0M</td><td>58.5M</td><td>112.5M</td><td class="below">−7.5M</td></tr></tfoot>
+            </table>
+          </div>
+          <div class="scenario-grid" aria-label="Forecast sensitivity scenarios">
+            <article class="scenario-card"><span>90% of original H2 plan</span><strong>TZS 108.0M</strong><p>Year-end total; TZS 12.0M below annual budget.</p></article>
+            <article class="scenario-card"><span>Base revised schedule</span><strong>TZS 112.5M</strong><p>Year-end total; TZS 7.5M below annual budget.</p></article>
+            <article class="scenario-card"><span>100% of original H2 plan</span><strong>TZS 114.0M</strong><p>Year-end total; TZS 6.0M below annual budget.</p></article>
+          </div>
+          <div class="analysis-note"><strong>Interpretation:</strong> The base scenario forecasts 93.8% utilization of the annual budget. Reaching the full annual budget would require TZS 66.0M of July-December spending, or 110% of the original TZS 60.0M second-half plan. That is arithmetic, not a target: valid activity needs and approvals should guide spending.</div>
+          <p class="metric-detail" style="margin-top:12px">Forecast assumptions are synthetic planning estimates, not a statistical projection or a real programme forecast.</p>
+        </section>
+
+        <section class="panel" id="evidence" aria-labelledby="evidence-title">
+          <div class="panel-heading"><h2 id="evidence-title">Supporting-record review</h2><p>Fictional document-pack completeness indicators show where a reviewer would follow up.</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable supporting record review table">
+            <table>
+              <caption>Synthetic supporting-document packs reviewed for January-June.</caption>
+              <thead><tr><th scope="col">Category</th><th scope="col">Packs reviewed</th><th scope="col">Complete</th><th scope="col">Pending</th><th scope="col">Complete %</th><th scope="col">Value linked to pending records</th></tr></thead>
+              <tbody>
+                <tr><td>Personnel</td><td>58</td><td>56</td><td>2</td><td>96.6%</td><td>0.6M</td></tr>
+                <tr><td>Community outreach</td><td>32</td><td>27</td><td>5</td><td>84.4%</td><td>1.5M</td></tr>
+                <tr><td>Medical supplies</td><td>40</td><td>34</td><td>6</td><td>85.0%</td><td>2.4M</td></tr>
+                <tr><td>Travel &amp; supervision</td><td>18</td><td>16</td><td>2</td><td>88.9%</td><td>0.5M</td></tr>
+              </tbody>
+              <tfoot><tr><td>Total</td><td>148</td><td>133</td><td>15</td><td>89.9%</td><td>5.0M</td></tr></tfoot>
+            </table>
+          </div>
+          <div class="analysis-note"><strong>Follow-up signal:</strong> 15 of 148 synthetic packs are incomplete, linked to TZS 5.0M. This is a request-and-review population only; incomplete records do not automatically mean expenditure is ineligible. Request the specific missing support, record an owner and due date, and assess evidence against the actual award terms.</div>
+        </section>
+
+        <section class="panel" id="interpretation" aria-labelledby="findings-title">
           <div class="panel-heading"><h2 id="findings-title">What the figures suggest</h2><p>These are review prompts based on the sample, not final explanations.</p></div>
           <div class="insight-grid">
             <article class="insight"><span class="insight-number">01 / OVERALL POSITION</span><h3>Spend is below plan</h3><p>Recorded expenditure is TZS 6.0M, or 10%, below the year-to-date plan. The figures show timing against plan; they do not establish a saving or a compliance issue.</p></article>
@@ -180,12 +271,29 @@
           </div>
         </section>
 
-        <section class="panel follow-up" aria-labelledby="followup-title">
-          <div><h2 id="followup-title">Evidence-led next step</h2><p>Request an updated activity schedule and supporting delivery or commitment records. Review them alongside the plan, then document the explanation and revise the forecast if needed.</p></div>
-          <a class="download" href="budget-performance-sample.csv" download>Download sample data ↓</a>
+        <section class="panel follow-up" id="follow-up" aria-labelledby="followup-title">
+          <div><h2 id="followup-title">Evidence-led next steps</h2><p>Use the variance to frame targeted questions, then make the decision from current records and approved plans.</p>
+            <ol class="action-list">
+              <li>Reconcile the six-month ledger extract to budget lines and confirm period cut-off and coding.</li>
+              <li>Trace the supply and outreach gaps to activity schedules, purchase commitments, deliveries, and receipt evidence.</li>
+              <li>Follow up on the 15 incomplete records with a named owner, requested document, due date, and resolution.</li>
+              <li>Update the forecast only after validating what can still be delivered and when.</li>
+            </ol>
+          </div>
+          <a class="download" href="#downloads">Download report and data ↓</a>
         </section>
 
-        <section class="panel method" aria-labelledby="method-title">
+        <section class="panel download-panel" id="downloads" aria-labelledby="downloads-title">
+          <div class="panel-heading"><h2 id="downloads-title">Download the full analysis</h2><p>The report includes the interpretation, assumptions, sensitivity scenarios, and evidence-led follow-up sequence.</p></div>
+          <div class="download-actions">
+            <a class="download" href="budget-analysis-report.pdf" download>Full analysis report (PDF) ↓</a>
+            <a class="download download-secondary" href="budget-analysis-pack.zip" download>Complete analysis and data pack (ZIP) ↓</a>
+            <a class="download download-secondary" href="budget-performance-monthly.csv" download>Monthly detail (CSV) ↓</a>
+          </div>
+          <p class="download-note">The full pack includes the PDF, category summary, 24 monthly category records, supporting-record review, forecast scenarios, and a data guide. Synthetic figures only.</p>
+        </section>
+
+        <section class="panel method" id="method" aria-labelledby="method-title">
           <div><h2 id="method-title">Method</h2><p>Variance = actual expenditure minus planned expenditure. A negative value means spend is below plan.</p><p>Variance percentage = variance divided by plan. Year-to-date burn rate = recorded expenditure divided by the approved annual budget.</p></div>
           <div class="formula"><strong>Sample calculations</strong><br>Overall variance: TZS 54.0M − TZS 60.0M = −TZS 6.0M<br>Variance percentage: −TZS 6.0M ÷ TZS 60.0M = −10%<br>Actual burn rate: TZS 54.0M ÷ TZS 120.0M = 45%</div>
         </section>

@@ -1,0 +1,5 @@
+﻿scenario,ytd_actual_tzs,jul_dec_spend_tzs,full_year_forecast_tzs,annual_budget_tzs,forecast_vs_budget_tzs,jul_dec_forecast_as_percent_of_original_plan,interpretation,data_classification
+Constrained delivery,54000000,54000000,108000000,120000000,-12000000,90.0,90% of the original second-half plan; sensitivity case only,Synthetic
+Base synthetic schedule,54000000,58500000,112500000,120000000,-7500000,97.5,Category estimates from a fictional revised activity schedule; not derived from a live system,Synthetic
+Full original second-half plan,54000000,60000000,114000000,120000000,-6000000,100.0,Assumes all original July-December plan is delivered,Synthetic
+Arithmetic to use the full annual budget,54000000,66000000,120000000,120000000,0,110.0,"Requires spending 110% of the original second-half plan; arithmetic only, not a target or recommendation",Synthetic
