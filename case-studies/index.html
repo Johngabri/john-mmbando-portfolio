@@ -232,6 +232,16 @@
     .note-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-deep); color: var(--navy); font-weight: 800; }
     .assumption-note p { margin: 0; }
     .assumption-note strong { color: var(--ink); }
+    .partner-learning { margin-top:18px; padding:clamp(19px,2.5vw,26px); border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.75); }
+    .partner-learning-header { max-width:700px; }
+    .partner-learning-header h3 { margin:0 0 6px; font-size:1.25rem; }
+    .partner-learning-header > p:last-child { margin:0; color:var(--muted); font-size:.88rem; }
+    .partner-learning-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:17px 0 0; padding:0; list-style:none; }
+    .partner-learning-step { padding:14px; border:1px solid rgba(23,51,71,.08); border-radius:12px; background:#f6f8f5; }
+    .partner-learning-step strong { display:block; margin-bottom:5px; color:var(--ink); font-size:.82rem; }
+    .partner-learning-step span { display:block; color:var(--muted); font-size:.78rem; line-height:1.45; }
+    .partner-learning-note { margin:13px 0 0; color:var(--muted); font-size:.76rem; line-height:1.5; }
+    .partner-learning-note strong { color:var(--ink); }
     .experience-section { padding: 4px 0 74px; }
     .experience-box { padding: clamp(22px,4vw,38px); border-radius: 26px; background: #e9eeea; }
     .experience-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; margin-bottom: 22px; }
@@ -270,6 +280,7 @@
       .demo-ribbon small { padding-left: 41px; text-align: left; }
       .case-index { grid-template-columns: 1fr; }
       .case-grid, .decision-grid, .asset-grid { grid-template-columns: 1fr; }
+      .partner-learning-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .section { padding-bottom: 48px; }
       .experience-top { flex-direction: column; }
       .footer-inner { flex-direction: column; }
@@ -283,6 +294,7 @@
       .metric { min-height: 125px; padding: 14px; }
       .metric-value { font-size: 1.45rem; }
       .panel { padding: 19px; }
+      .partner-learning-grid { grid-template-columns:1fr; }
       .panel-title-row { flex-direction: column; }
       .experience-grid { grid-template-columns: 1fr; gap: 8px; }
       .experience-stat { padding: 14px; }
@@ -608,6 +620,20 @@
             </div>
           </article>
         </div>
+        <section class="partner-learning" aria-labelledby="partner-learning-title">
+          <div class="partner-learning-header">
+            <p class="section-kicker">Partner support · illustrative loop</p>
+            <h3 id="partner-learning-title">Turn a review question into a clearer next submission.</h3>
+            <p>A constructive follow-up can resolve the current gap and help make future requests easier to review.</p>
+          </div>
+          <ol class="partner-learning-grid">
+            <li class="partner-learning-step"><strong>Explain the gap</strong><span>Point to the exact difference between the request and schedule.</span></li>
+            <li class="partner-learning-step"><strong>Request specific support</strong><span>Name the line, explanation or record needed to reconcile it.</span></li>
+            <li class="partner-learning-step"><strong>Verify and document</strong><span>Check any revision, retain a clear trail and record the outcome.</span></li>
+            <li class="partner-learning-step"><strong>Feed back the pattern</strong><span>Use recurring issues as a topic for future partner coaching.</span></li>
+          </ol>
+          <p class="partner-learning-note"><strong>Scope:</strong> This is a general fictional example, not employer or donor guidance. Apply the relevant agreement, donor requirements and organisational review process.</p>
+        </section>
         <div class="assumption-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Fictional case:</strong> TZS 42.0M, TZS 39.5M, and the TZS 2.5M difference are synthetic. The case demonstrates reconciliation judgment; it does not describe a real request or prescribe an employer's approval process.</p></div>
       </div>
     </section>
@@ -1145,4 +1171,5 @@
   </script>
 </body>
 </html>
+
 
