@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c40">
+  <meta name="description" content="An independent budget performance review using synthetic data, demonstrating year-to-date plan and actual analysis, variance review and evidence-led follow-up.">
+  <title>Budget Performance Sample | John Gabriel Mmbando</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#142f40; --ink-soft:#3d5966; --muted:#596a70; --paper:#f5f6f2; --white:#fff; --line:#dce4df; --teal:#146d68; --teal-dark:#0e5554; --teal-pale:#e6f1ed; --gold:#bf9854; --navy:#102c40; --navy-2:#1c4351; --content:1080px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:88px; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3 { margin-top:0; font-family:'Manrope',sans-serif; letter-spacing:-.035em; }
+    a { color:inherit; }
+    .wrap { width:min(var(--content),calc(100% - 48px)); margin:0 auto; }
+    .skip-link { position:absolute; left:16px; top:-60px; z-index:10; padding:12px 16px; color:white; background:var(--navy); border-radius:8px; }
+    .skip-link:focus { top:12px; }
+    .header { position:sticky; top:0; z-index:5; background:rgba(245,246,242,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
+    .header-inner,.footer-inner { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:inline-flex; align-items:center; gap:11px; font:700 13px 'Manrope',sans-serif; text-decoration:none; }
+    .brand-mark { width:38px; height:38px; display:grid; place-items:center; color:white; background:var(--navy); border-radius:12px; font-size:12px; }
+    .back-link { color:var(--teal-dark); font-size:13px; font-weight:700; text-decoration:none; }
+    .back-link:hover { text-decoration:underline; }
+    .hero { padding:62px 0 35px; background:var(--paper); }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--teal); font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+    .eyebrow:before { content:''; width:22px; height:1px; background:var(--gold); }
+    h1 { max-width:850px; margin:15px 0 15px; font-size:clamp(36px,5vw,58px); line-height:1.08; }
+    .hero-copy { max-width:760px; margin:0; color:var(--ink-soft); font-size:17px; }
+    .sample-note { display:flex; gap:13px; align-items:flex-start; margin-top:25px; padding:16px 18px; color:var(--ink); background:#f3ecdc; border-left:3px solid var(--gold); border-radius:0 12px 12px 0; font-size:13px; }
+    .sample-note strong { display:block; margin-bottom:2px; }
+    .dashboard { padding:18px 0 75px; }
+    .summary-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .metric { min-height:130px; padding:20px; background:white; border:1px solid var(--line); border-radius:15px; }
+    .metric-label { display:block; color:var(--muted); font-size:12px; font-weight:600; }
+    .metric-value { display:block; margin:9px 0 3px; font:800 clamp(21px,3vw,29px)/1.15 'Manrope',sans-serif; letter-spacing:-.04em; }
+    .metric-detail { color:var(--ink-soft); font-size:12px; }
+    .metric.variance { border-top:3px solid var(--gold); }
+    .panel { margin-top:18px; padding:27px; background:white; border:1px solid var(--line); border-radius:17px; }
+    .panel-heading { margin-bottom:19px; }
+    .panel-heading h2 { margin:0 0 5px; font-size:23px; }
+    .panel-heading p { margin:0; color:var(--muted); font-size:13px; }
+    .bars { display:grid; gap:16px; }
+    .bar-row { display:grid; grid-template-columns:155px minmax(100px,1fr) 190px; align-items:center; gap:16px; font-size:13px; }
+    .bar-label { font-weight:700; }
+    .bar-track { height:16px; overflow:hidden; background:#e9eeeb; border-radius:99px; }
+    .bar-fill { height:100%; display:block; border-radius:inherit; }
+    .bar-fill.plan { width:50%; background:#91a8aa; }
+    .bar-fill.actual { width:45%; background:var(--teal); }
+    .bar-value { color:var(--ink-soft); }
+    .bar-value strong { color:var(--ink); }
+    .chart-legend { display:flex; flex-wrap:wrap; gap:18px; margin-top:21px; color:var(--muted); font-size:12px; }
+    .legend-item { display:inline-flex; align-items:center; gap:8px; }
+    .legend-swatch { width:10px; height:10px; border-radius:3px; background:#91a8aa; }
+    .legend-swatch.actual { background:var(--teal); }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    caption { padding:0 0 12px; color:var(--muted); text-align:left; font-size:12px; }
+    th,td { padding:12px 13px; border-bottom:1px solid #e8eeea; text-align:right; white-space:nowrap; }
+    th { color:var(--ink-soft); background:#f6f8f5; font-size:11px; letter-spacing:.03em; }
+    th:first-child,td:first-child { text-align:left; }
+    tfoot td { color:var(--ink); background:#f6f8f5; font-weight:800; }
+    .below { color:#315d55; font-weight:700; }
+    .above { color:#835d21; font-weight:700; }
+    .insight-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .insight { min-height:150px; padding:20px; background:#fbfcf9; border:1px solid var(--line); border-radius:13px; }
+    .insight-number { display:block; margin-bottom:8px; color:var(--teal); font:800 12px 'Manrope',sans-serif; letter-spacing:.08em; }
+    .insight h3 { margin:0 0 7px; font-size:16px; }
+    .insight p { margin:0; color:var(--ink-soft); font-size:13px; }
+    .follow-up { display:grid; grid-template-columns:1fr auto; align-items:center; gap:22px; padding:23px; color:white; background:var(--navy); border-radius:15px; }
+    .follow-up h2 { margin:0 0 6px; font-size:20px; }
+    .follow-up p { margin:0; color:#e2eaeb; font-size:13px; }
+    .download { min-height:45px; display:inline-flex; align-items:center; justify-content:center; padding:0 16px; color:var(--navy); background:#f0e2c2; border-radius:999px; font-size:12px; font-weight:800; text-decoration:none; white-space:nowrap; }
+    .download:hover { background:white; }
+    .method { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .method h2 { margin:0 0 8px; font-size:19px; }
+    .method p,.method li { color:var(--ink-soft); font-size:13px; }
+    .method p { margin:0 0 8px; }
+    .method ul { margin:0; padding-left:18px; }
+    .formula { padding:16px; color:var(--ink); background:var(--teal-pale); border-radius:11px; font:600 13px/1.7 'DM Sans',sans-serif; }
+    .footer { color:#e3eaeb; background:#0b2536; font-size:12px; }
+    .footer-inner { min-height:65px; }
+    .footer a { color:white; font-weight:700; text-decoration:none; }
+    .footer a:hover { text-decoration:underline; }
+    :focus-visible { outline:3px solid #d1af70; outline-offset:3px; }
+    @media(max-width:760px) {
+      .summary-grid { grid-template-columns:repeat(2,1fr); }
+      .insight-grid { grid-template-columns:1fr; }
+      .insight { min-height:0; }
+      .bar-row { grid-template-columns:120px minmax(70px,1fr); gap:9px 12px; }
+      .bar-value { grid-column:2; }
+      .follow-up { grid-template-columns:1fr; }
+      .download { justify-self:start; }
+    }
+    @media(max-width:560px) {
+      .wrap { width:calc(100% - 30px); }
+      .header-inner { min-height:64px; }
+      .brand { font-size:12px; }
+      .back-link { font-size:12px; }
+      .hero { padding-top:42px; }
+      .hero-copy { font-size:15px; }
+      .panel { padding:19px; }
+      .bar-row { grid-template-columns:1fr; gap:7px; }
+      .bar-value { grid-column:auto; }
+      .method { grid-template-columns:1fr; }
+      .footer-inner { align-items:flex-start; justify-content:center; flex-direction:column; gap:0; padding:15px 0; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition-duration:.01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to analysis</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="John Gabriel Mmbando portfolio">
+        <span class="brand-mark" aria-hidden="true">JM</span>
+        <span>John Gabriel Mmbando</span>
+      </a>
+      <a class="back-link" href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Financial analysis · independent work sample</span>
+        <h1>A 10% variance is a question, not a conclusion.</h1>
+        <p class="hero-copy">This synthetic year-to-date budget review compares plan with recorded expenditure, traces category variances, and identifies what to verify before explaining them.</p>
+        <aside class="sample-note" aria-label="Data and scope note">
+          <span aria-hidden="true">i</span>
+          <div><strong>Illustrative data only</strong>All figures are fictional. This is an independent demonstration, not employer work, a donor threshold, or a finding about a real programme.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="Budget performance analysis">
+      <div class="wrap">
+        <div class="summary-grid" aria-label="Summary figures for the synthetic sample">
+          <article class="metric"><span class="metric-label">Approved annual budget</span><strong class="metric-value">TZS 120.0M</strong><span class="metric-detail">Fictional sample budget</span></article>
+          <article class="metric"><span class="metric-label">Planned through June</span><strong class="metric-value">TZS 60.0M</strong><span class="metric-detail">50% of annual budget</span></article>
+          <article class="metric"><span class="metric-label">Recorded through June</span><strong class="metric-value">TZS 54.0M</strong><span class="metric-detail">45% of annual budget</span></article>
+          <article class="metric variance"><span class="metric-label">Actual versus plan</span><strong class="metric-value">−TZS 6.0M</strong><span class="metric-detail">10% below year-to-date plan</span></article>
+        </div>
+
+        <section class="panel" aria-labelledby="position-title">
+          <div class="panel-heading"><h2 id="position-title">Spending position through June</h2><p>Actual spend is shown against the approved annual budget.</p></div>
+          <div class="bars" role="img" aria-label="Year-to-date plan is 50 percent of the approved annual budget. Recorded expenditure is 45 percent.">
+            <div class="bar-row"><span class="bar-label">Year-to-date plan</span><span class="bar-track"><span class="bar-fill plan"></span></span><span class="bar-value"><strong>TZS 60.0M</strong> · 50%</span></div>
+            <div class="bar-row"><span class="bar-label">Recorded spend</span><span class="bar-track"><span class="bar-fill actual"></span></span><span class="bar-value"><strong>TZS 54.0M</strong> · 45%</span></div>
+          </div>
+          <div class="chart-legend"><span class="legend-item"><span class="legend-swatch" aria-hidden="true"></span>Plan</span><span class="legend-item"><span class="legend-swatch actual" aria-hidden="true"></span>Recorded expenditure</span><span>Review period: January–June · illustrative</span></div>
+        </section>
+
+        <section class="panel" aria-labelledby="table-title">
+          <div class="panel-heading"><h2 id="table-title">Budget by category</h2><p>Negative variance means recorded spending is below plan; positive means it is above plan.</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable synthetic budget data table">
+            <table>
+              <caption>Synthetic approved budget, year-to-date plan and recorded expenditure in Tanzanian shillings.</caption>
+              <thead><tr><th scope="col">Category</th><th scope="col">Annual budget</th><th scope="col">YTD plan</th><th scope="col">YTD actual</th><th scope="col">Variance</th><th scope="col">Variance %</th></tr></thead>
+              <tbody>
+                <tr><td>Personnel</td><td>48.0M</td><td>24.0M</td><td>24.6M</td><td class="above">+0.6M</td><td class="above">+2.5%</td></tr>
+                <tr><td>Community outreach</td><td>36.0M</td><td>18.0M</td><td>15.3M</td><td class="below">−2.7M</td><td class="below">−15.0%</td></tr>
+                <tr><td>Medical supplies</td><td>24.0M</td><td>12.0M</td><td>9.0M</td><td class="below">−3.0M</td><td class="below">−25.0%</td></tr>
+                <tr><td>Travel &amp; supervision</td><td>12.0M</td><td>6.0M</td><td>5.1M</td><td class="below">−0.9M</td><td class="below">−15.0%</td></tr>
+              </tbody>
+              <tfoot><tr><td>Total</td><td>120.0M</td><td>60.0M</td><td>54.0M</td><td>−6.0M</td><td>−10.0%</td></tr></tfoot>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="findings-title">
+          <div class="panel-heading"><h2 id="findings-title">What the figures suggest</h2><p>These are review prompts based on the sample, not final explanations.</p></div>
+          <div class="insight-grid">
+            <article class="insight"><span class="insight-number">01 / OVERALL POSITION</span><h3>Spend is below plan</h3><p>Recorded expenditure is TZS 6.0M, or 10%, below the year-to-date plan. The figures show timing against plan; they do not establish a saving or a compliance issue.</p></article>
+            <article class="insight"><span class="insight-number">02 / MAIN VARIANCES</span><h3>Check outreach and supplies</h3><p>These categories are TZS 5.7M below plan in total. Confirm activity timing, purchase commitments, delivery records, and whether the forecast needs updating.</p></article>
+            <article class="insight"><span class="insight-number">03 / ABOVE PLAN</span><h3>Review personnel spend</h3><p>Personnel expenditure is TZS 0.6M above plan. Check the underlying period and classification, then record the explanation and any follow-up.</p></article>
+          </div>
+        </section>
+
+        <section class="panel follow-up" aria-labelledby="followup-title">
+          <div><h2 id="followup-title">Evidence-led next step</h2><p>Request an updated activity schedule and supporting delivery or commitment records. Review them alongside the plan, then document the explanation and revise the forecast if needed.</p></div>
+          <a class="download" href="budget-performance-sample.csv" download>Download sample data ↓</a>
+        </section>
+
+        <section class="panel method" aria-labelledby="method-title">
+          <div><h2 id="method-title">Method</h2><p>Variance = actual expenditure minus planned expenditure. A negative value means spend is below plan.</p><p>Variance percentage = variance divided by plan. Year-to-date burn rate = recorded expenditure divided by the approved annual budget.</p></div>
+          <div class="formula"><strong>Sample calculations</strong><br>Overall variance: TZS 54.0M − TZS 60.0M = −TZS 6.0M<br>Variance percentage: −TZS 6.0M ÷ TZS 60.0M = −10%<br>Actual burn rate: TZS 54.0M ÷ TZS 120.0M = 45%</div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>Independent synthetic-data exercise · John Gabriel Mmbando</span><a href="index.html">Return to portfolio ↑</a></div></footer>
+</body>
+</html>

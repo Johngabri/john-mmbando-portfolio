@@ -16,7 +16,7 @@ Edit `portfolio/index.html` to change the profile text. The root `index.html` on
 
 The public profile includes the verified role dates, current CPA study status, LinkedIn address, contact details, and selected achievements from the latest CV. The CV itself is available by request.
 
-Analytical samples are marked as planned and should only be added after completion using synthetic or public data.
+The portfolio includes an independent budget-performance review at `portfolio/budget-dashboard.html` with a downloadable synthetic dataset. The figures are fictional and must remain clearly separated from verified employment achievements. Add new analytical samples only after completion, using synthetic or public data.
 
 ## Contact behavior
 
