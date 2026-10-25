@@ -1223,6 +1223,7 @@
             var label = textOf(button.querySelector("strong")) || textOf(button);
             var detail = textOf(button.querySelector("small"));
             var effect = button.getAttribute("data-report-effect") || button.getAttribute("data-response") || detail || "The page does not define an additional simulated effect for this option.";
+            effect = effect.replace(/^simulated effect\s*:\s*/i, "");
             var selected = button.getAttribute("aria-pressed") === "true";
             lines.push("", "- **" + (selected ? "Selected: " : "Option: ") + label + "**");
             if (detail && detail !== effect) lines.push("  - Choice note: " + detail);
