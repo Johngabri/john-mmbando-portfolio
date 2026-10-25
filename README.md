@@ -4,15 +4,15 @@ A responsive, static portfolio site built with HTML, CSS, and JavaScript. It has
 
 ## Publish on GitHub Pages
 
-This portfolio is published from the public `Johngabri/john-mmbando-portfolio` repository. Its GitHub Pages source is the `main` branch and `/(root)` folder.
+This portfolio is published from the public `Johngabri/john-mmbando-portfolio` repository. Its GitHub Pages source is the `main` branch and `/(root)` folder. The site root immediately redirects to `/portfolio/`, which is the main professional profile. The four interactive cases remain available as a section in the profile and on their independent `/case-studies/` page.
 
-The expected website address is `https://johngabri.github.io/john-mmbando-portfolio/`. GitHub will show the final public address on the Pages settings screen after the first deployment completes.
+The website address is `https://johngabri.github.io/john-mmbando-portfolio/`.
 
 GitHub Pages is free for public repositories on GitHub Free. Publishing makes the repository files and profile content publicly viewable.
 
 ## Update the profile
 
-Edit `index.html` in the repository to change the site text. Replace `profile.jpg` to change the portrait. Confirm job titles, employers, dates, responsibilities, achievements, and course status against an approved CV or supporting records before changing them.
+Edit `portfolio/index.html` to change the profile text. The root `index.html` only redirects to the profile. Replace `profile.jpg` to change the portrait. Confirm job titles, employers, dates, responsibilities, achievements, and course status against an approved CV or supporting records before changing them.
 
 The public profile includes the verified role dates, current CPA study status, LinkedIn address, contact details, and selected achievements from the latest CV. The CV itself is available by request.
 
